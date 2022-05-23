@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Microservices.MarketPlace.Example.CommonUses/1.0.0": {
+        "runtime": {
+          "Microservices.MarketPlace.Example.CommonUses.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microservices.MarketPlace.Example.CommonUses/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
