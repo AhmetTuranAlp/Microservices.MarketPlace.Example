@@ -42,3 +42,10 @@ C:\GithubProject\Microservices.MarketPlace.Example\Microservices.MarketPlace.Exa
 C:\GithubProject\Microservices.MarketPlace.Example\Microservices.MarketPlace.Example.Product\bin\Debug\net5.0\Microservices.MarketPlace.Example.CommonUses.pdb
 C:\GithubProject\Microservices.MarketPlace.Example\Microservices.MarketPlace.Example.Product\bin\Debug\net5.0\AutoMapper.dll
 C:\GithubProject\Microservices.MarketPlace.Example\Microservices.MarketPlace.Example.Product\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\GithubProject\Microservices.MarketPlace.Example\Microservices.MarketPlace.Example.Product\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\GithubProject\Microservices.MarketPlace.Example\Microservices.MarketPlace.Example.Product\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\GithubProject\Microservices.MarketPlace.Example\Microservices.MarketPlace.Example.Product\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\GithubProject\Microservices.MarketPlace.Example\Microservices.MarketPlace.Example.Product\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\GithubProject\Microservices.MarketPlace.Example\Microservices.MarketPlace.Example.Product\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\GithubProject\Microservices.MarketPlace.Example\Microservices.MarketPlace.Example.Product\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\GithubProject\Microservices.MarketPlace.Example\Microservices.MarketPlace.Example.Product\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

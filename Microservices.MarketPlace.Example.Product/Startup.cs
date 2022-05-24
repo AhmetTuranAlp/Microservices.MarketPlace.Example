@@ -1,6 +1,7 @@
-using Microservices.MarketPlace.Example.Product.Services;
+﻿using Microservices.MarketPlace.Example.Product.Services;
 using Microservices.MarketPlace.Example.Product.Services.Interfaces;
 using Microservices.MarketPlace.Example.Product.Settings;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -30,15 +31,26 @@ namespace Microservices.MarketPlace.Example.Product
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region IdentityServer üzerinden token ile API Güvenceye alınmıştır.
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+             {
+                 options.Authority = Configuration["IdentityServerURL"];
+                 options.Audience = "resource_product";
+                 options.RequireHttpsMetadata = false;
+             }); 
+            #endregion
+
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IBrandService, BrandService>();
             services.AddAutoMapper(typeof(Startup));
-            services.AddControllers();
-            //services.AddControllers(opt =>
-            //{
-            //    opt.Filters.Add(new AuthorizeFilter());
-            //});
+
+            #region Tüm Controller için Authorize eklenmesini tek bir yerden yapılmasını saglar.
+            services.AddControllers(opt =>
+            {
+                opt.Filters.Add(new AuthorizeFilter());
+            });
+            #endregion
 
             services.Configure<DatabaseSettings>(Configuration.GetSection("DatabaseSettings"));
 
@@ -66,7 +78,7 @@ namespace Microservices.MarketPlace.Example.Product
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseAuthentication();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

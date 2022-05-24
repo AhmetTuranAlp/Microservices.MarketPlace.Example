@@ -24,6 +24,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.Example.CommonUses", "Microservices.MarketPlace.Example.CommonUses\Microservices.MarketPlace.Example.CommonUses.csproj", "{C87A6879-F295-4ECF-AF76-688C7842895A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.Example.IdentityServer", "IdentityServer\Microservices.MarketPlace.Example.IdentityServer\Microservices.MarketPlace.Example.IdentityServer.csproj", "{F299ECD1-842B-4375-A600-6BB3258DAD7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{C87A6879-F295-4ECF-AF76-688C7842895A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C87A6879-F295-4ECF-AF76-688C7842895A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C87A6879-F295-4ECF-AF76-688C7842895A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F299ECD1-842B-4375-A600-6BB3258DAD7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F299ECD1-842B-4375-A600-6BB3258DAD7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F299ECD1-842B-4375-A600-6BB3258DAD7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F299ECD1-842B-4375-A600-6BB3258DAD7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{FB953509-7BCF-4E6D-919E-73C0B001EADE} = {8B15CC5A-7087-4AD4-A0A6-92EC663828D5}
 		{207F1A0E-9E1C-4318-8AF7-2C2883A60FF8} = {FB953509-7BCF-4E6D-919E-73C0B001EADE}
 		{C87A6879-F295-4ECF-AF76-688C7842895A} = {DE8D805A-C411-4AA1-8863-39628E66B7E5}
+		{F299ECD1-842B-4375-A600-6BB3258DAD7F} = {57314793-AF1F-410F-988C-7C2890B85BA7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CD47D357-BBEC-43C6-A8F4-97248C15EDF8}
