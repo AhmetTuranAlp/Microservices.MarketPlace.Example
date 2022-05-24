@@ -5,6 +5,7 @@
 using IdentityServer4;
 using Microservices.MarketPlace.Example.IdentityServer.Data;
 using Microservices.MarketPlace.Example.IdentityServer.Models;
+using Microservices.MarketPlace.Example.IdentityServer.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -55,6 +56,10 @@ namespace Microservices.MarketPlace.Example.IdentityServer
                 .AddInMemoryApiScopes(Config.ApiScopes)
                 .AddInMemoryClients(Config.Clients)
                 .AddAspNetIdentity<ApplicationUser>();
+
+            #region Email ve Şifre işlemleri için tanımlanan class tanımlanmıştır.
+            builder.AddResourceOwnerValidator<IdentityResourceOwnerPasswordValidator>(); 
+            #endregion
 
             // not recommended for production - you need to store your key material somewhere secure
             builder.AddDeveloperSigningCredential();

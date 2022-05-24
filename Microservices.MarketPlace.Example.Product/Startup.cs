@@ -31,18 +31,21 @@ namespace Microservices.MarketPlace.Example.Product
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            #region IdentityServer üzerinden token ile API Güvenceye alınmıştır.
+            #region IdentityServer üzerinden token ile API güvenceye alınmıştır.
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
              {
                  options.Authority = Configuration["IdentityServerURL"];
                  options.Audience = "resource_product";
                  options.RequireHttpsMetadata = false;
-             }); 
+             });
             #endregion
 
+            #region Services DI
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ICategoryService, CategoryService>();
-            services.AddScoped<IBrandService, BrandService>();
+            services.AddScoped<IBrandService, BrandService>(); 
+            #endregion
+
             services.AddAutoMapper(typeof(Startup));
 
             #region Tüm Controller için Authorize eklenmesini tek bir yerden yapılmasını saglar.
@@ -52,12 +55,14 @@ namespace Microservices.MarketPlace.Example.Product
             });
             #endregion
 
+            #region MongoDB entegrasyonu.
             services.Configure<DatabaseSettings>(Configuration.GetSection("DatabaseSettings"));
 
             services.AddSingleton<IDatabaseSettings>(sp =>
             {
                 return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
             });
+            #endregion
 
             services.AddSwaggerGen(c =>
             {
@@ -78,7 +83,11 @@ namespace Microservices.MarketPlace.Example.Product
             app.UseRouting();
 
             app.UseAuthorization();
+
+            #region IdentityServer üzerinden token ile API güvenceye alınmıştır.
             app.UseAuthentication();
+            #endregion
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

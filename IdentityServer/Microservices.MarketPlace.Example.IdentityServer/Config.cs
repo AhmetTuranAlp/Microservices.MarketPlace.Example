@@ -4,6 +4,7 @@
 
 using IdentityServer4;
 using IdentityServer4.Models;
+using System;
 using System.Collections.Generic;
 
 namespace Microservices.MarketPlace.Example.IdentityServer
@@ -16,12 +17,16 @@ namespace Microservices.MarketPlace.Example.IdentityServer
             new ApiResource("resource_product"){Scopes={"product_fullpermission"}},
             new ApiResource("resource_image"){Scopes={"image_cdn_fullpermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
-}       ;
+};
 
         public static IEnumerable<IdentityResource> IdentityResources =>
         new IdentityResource[]
         {
-
+             //Genel izinler tanımlanmıştır.
+             new IdentityResources.Email(),
+             new IdentityResources.OpenId(),
+             new IdentityResources.Profile(),
+             new IdentityResource(){ Name="roles", DisplayName="Roles", Description="Kullanıcı rolleri", UserClaims=new []{ "role"} }
         };
 
         public static IEnumerable<ApiScope> ApiScopes =>
@@ -36,13 +41,36 @@ namespace Microservices.MarketPlace.Example.IdentityServer
         new Client[]
         {
             new Client
+            {
+                ClientName="UI Client",
+                ClientId="UIClient",
+                ClientSecrets= {new Secret("UIClientPassword".Sha256())},
+                AllowedGrantTypes= GrantTypes.ClientCredentials,
+                AllowedScopes={ "product_fullpermission", "image_cdn_fullpermission", IdentityServerConstants.LocalApi.ScopeName }
+            },
+            new Client
+            {
+                ClientName="UI Client User ",
+                ClientId="UIClientForUserNameandPassword",
+                AllowOfflineAccess=true,
+                ClientSecrets= {new Secret("UIClientPassword".Sha256())},
+                AllowedGrantTypes= GrantTypes.ResourceOwnerPassword,
+                //AllowedScopes = Kullanıcı token aldıgında token ile beraber hangi bilgilere erişebileceği tanımlanmıştır.
+                AllowedScopes=
                 {
-                    ClientName="UI Client",
-                    ClientId="UIClient",
-                    ClientSecrets= {new Secret("UIClientPassword".Sha256())},
-                    AllowedGrantTypes= GrantTypes.ClientCredentials,
-                    AllowedScopes={ "product_fullpermission", "image_cdn_fullpermission", IdentityServerConstants.LocalApi.ScopeName }
-                }
+                  //"product_fullpermission",
+                  //"image_cdn_fullpermission",
+                  IdentityServerConstants.StandardScopes.Email,
+                  IdentityServerConstants.StandardScopes.OpenId,
+                  IdentityServerConstants.StandardScopes.Profile,
+                  IdentityServerConstants.StandardScopes.OfflineAccess,//Kullanıcı token ömrü bittiğinde login ekranına gönderilmektedir.
+                  IdentityServerConstants.LocalApi.ScopeName,"roles"
+                },
+                AccessTokenLifetime=1*60*60, //AccessToken ömrü belirnenmektedir.
+                RefreshTokenExpiration=TokenExpiration.Absolute, //RefreshToken istedikçe ömrü artılılaması saglanmaktadır.
+                AbsoluteRefreshTokenLifetime= (int) (DateTime.Now.AddDays(60)- DateTime.Now).TotalSeconds,//RefreshToken ömrü belirlenmekte 
+                RefreshTokenUsage= TokenUsage.ReUse //RefreshToken kullanım durumu belirlenmektedir. Tekrar kullanılabilir yapılmıştır.
+            }
         };
     }
 }
