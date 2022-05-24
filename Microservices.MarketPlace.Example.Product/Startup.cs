@@ -1,10 +1,15 @@
+using Microservices.MarketPlace.Example.Product.Services;
+using Microservices.MarketPlace.Example.Product.Services.Interfaces;
+using Microservices.MarketPlace.Example.Product.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
@@ -25,8 +30,23 @@ namespace Microservices.MarketPlace.Example.Product
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IBrandService, BrandService>();
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
+            //services.AddControllers(opt =>
+            //{
+            //    opt.Filters.Add(new AuthorizeFilter());
+            //});
+
+            services.Configure<DatabaseSettings>(Configuration.GetSection("DatabaseSettings"));
+
+            services.AddSingleton<IDatabaseSettings>(sp =>
+            {
+                return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Microservices.MarketPlace.Example.Product", Version = "v1" });

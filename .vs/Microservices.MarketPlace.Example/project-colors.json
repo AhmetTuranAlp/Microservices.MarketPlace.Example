@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c87a6879-f295-4ecf-af76-688c7842895a": {
+      "ProjectGuid": "c87a6879-f295-4ecf-af76-688c7842895a",
+      "DisplayName": "Microservices.MarketPlace.Example.CommonUses",
+      "ColorIndex": 0
+    },
+    "207f1a0e-9e1c-4318-8af7-2c2883a60ff8": {
+      "ProjectGuid": "207f1a0e-9e1c-4318-8af7-2c2883a60ff8",
+      "DisplayName": "Microservices.MarketPlace.Example.Product",
+      "ColorIndex": 1
+    },
+    "52d4c898-f48d-4e22-8918-e1e5427dbfc9": {
+      "ProjectGuid": "52d4c898-f48d-4e22-8918-e1e5427dbfc9",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

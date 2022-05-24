@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Microservices.MarketPlace.Example.Product.Enumeration
 {
-    public class Currency
+    public static class Currency
     {
-        public enum CurrencyType
+        public enum CurrencyType : int
         {
             [Description("TL")]
             TRY = 0,

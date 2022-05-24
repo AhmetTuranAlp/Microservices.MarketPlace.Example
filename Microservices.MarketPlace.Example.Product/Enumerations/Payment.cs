@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Microservices.MarketPlace.Example.Product.Enumeration
 {
-    public class Payment
+    public static class Payment
     {
         public enum PaymentType : int
         {

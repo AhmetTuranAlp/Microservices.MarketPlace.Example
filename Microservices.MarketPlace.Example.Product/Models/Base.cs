@@ -2,7 +2,6 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
-using static Microservices.MarketPlace.Example.Product.Enumeration.Status;
 
 namespace Microservices.MarketPlace.Example.Product.Models
 {
@@ -10,7 +9,7 @@ namespace Microservices.MarketPlace.Example.Product.Models
     {
         public Base()
         {
-            StatusType = StatusType.NewRecord;
+            StatusType = Status.StatusType.NewRecord;
             UpdateDate = DateTime.Now;
             UploadDate = DateTime.Now;
         }
@@ -19,8 +18,8 @@ namespace Microservices.MarketPlace.Example.Product.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
-        private StatusType _status = StatusType.Active;
-        public virtual StatusType StatusType
+        private Status.StatusType _status = Status.StatusType.Active;
+        public virtual Status.StatusType StatusType
         {
             get
             {

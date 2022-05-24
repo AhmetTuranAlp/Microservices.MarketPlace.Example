@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Microservices.MarketPlace.Example.CommonUses.Base
 {
-    public class CustomBaseController : ControllerBase
+    public abstract class CustomBaseController : ControllerBase
     {
         public IActionResult CreateActionResultInstance<T>(Response<T> response)
         {

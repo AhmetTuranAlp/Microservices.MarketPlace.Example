@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Microservices.MarketPlace.Example.Product.Enumeration
 {
-    public class Status
+    public static class Status
     {
         public enum StatusType : int
         {

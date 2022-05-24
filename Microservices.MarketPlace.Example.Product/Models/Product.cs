@@ -1,6 +1,8 @@
-﻿using MongoDB.Bson;
+﻿using Microservices.MarketPlace.Example.Product.Enumeration;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Microservices.MarketPlace.Example.Product.Models
@@ -11,7 +13,7 @@ namespace Microservices.MarketPlace.Example.Product.Models
         public string ProductId { get; set; }
         public string ShortDescription { get; set; }
         public string Description { get; set; }
-        public string Image { get; set; }
+        public List<string> Images { get; set; }
         public Brand Brand { get; set; }
         public Category Category { get; set; }
 
@@ -35,7 +37,8 @@ namespace Microservices.MarketPlace.Example.Product.Models
         [BsonRepresentation(BsonType.Decimal128)]
         public decimal KDV { get; set; }
 
-        [BsonRepresentation(BsonType.ObjectId)]
         public int Stock { get; set; }
+
+        public Currency.CurrencyType CurrencyType { get; set; }
     }
 }

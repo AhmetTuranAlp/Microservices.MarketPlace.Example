@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{52D4C898-F48D-4E22-8918-E1E5427DBFC9}"
+	ProjectSection(SolutionItems) = preProject
+		..\ECommerce.Microservices\docker cli.txt = ..\ECommerce.Microservices\docker cli.txt
+		..\ECommerce.Microservices\docker-compose.yml = ..\ECommerce.Microservices\docker-compose.yml
+		..\ECommerce.Microservices\Ports.txt = ..\ECommerce.Microservices\Ports.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{DE8D805A-C411-4AA1-8863-39628E66B7E5}"
 EndProject
@@ -17,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Product", "Product", "{FB95
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.Example.Product", "Microservices.MarketPlace.Example.Product\Microservices.MarketPlace.Example.Product.csproj", "{207F1A0E-9E1C-4318-8AF7-2C2883A60FF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.MarketPlace.Example.CommonUses", "Microservices.MarketPlace.Example.CommonUses\Microservices.MarketPlace.Example.CommonUses.csproj", "{C87A6879-F295-4ECF-AF76-688C7842895A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.Example.CommonUses", "Microservices.MarketPlace.Example.CommonUses\Microservices.MarketPlace.Example.CommonUses.csproj", "{C87A6879-F295-4ECF-AF76-688C7842895A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
