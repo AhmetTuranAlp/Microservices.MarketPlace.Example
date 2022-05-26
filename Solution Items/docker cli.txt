@@ -1,0 +1,1 @@
+﻿+Docker Portainer Kurulumu (Bilgisayarda bulunan container, image yönetmek için kullanılmaktadır.) : docker-compose.yml kurulumu [docker-compose up -d] komutu ile yapıldı.

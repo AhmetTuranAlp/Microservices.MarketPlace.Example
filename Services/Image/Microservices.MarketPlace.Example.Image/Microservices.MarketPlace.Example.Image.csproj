@@ -14,7 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Microservices.MarketPlace.Example.CommonUses\Microservices.MarketPlace.Example.CommonUses.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Microservices.MarketPlace.Example.CommonUses\Microservices.MarketPlace.Example.CommonUses.csproj" />
   </ItemGroup>
+
+
 
 </Project>

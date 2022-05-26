@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6d+tFpCRIBXp3aljB90VUwOkrtm3iXLbyx2gTcSTdfDTF2URysUhVShP9uOc9dDm3Ym/JtCPklu9Ns8JaTAsTw==",
+  "dgSpecHash": "bOzegnNSu2u6dGfKnmXMGkzGFC9qIjc2llkI6wgXdK7Oh8UZCCOnLWAK7pYM/7YHFbfAO2qgfL43sHtAK6de+w==",
   "success": true,
   "projectFilePath": "C:\\GithubProject\\Microservices.MarketPlace.Example\\IdentityServer\\Microservices.MarketPlace.Example.IdentityServer\\Microservices.MarketPlace.Example.IdentityServer.csproj",
   "expectedPackageFiles": [

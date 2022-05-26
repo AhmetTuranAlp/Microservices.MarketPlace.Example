@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{52D4C898-F48D-4E22-8918-E1E5427DBFC9}"
 	ProjectSection(SolutionItems) = preProject
-		..\ECommerce.Microservices\docker cli.txt = ..\ECommerce.Microservices\docker cli.txt
-		..\ECommerce.Microservices\docker-compose.yml = ..\ECommerce.Microservices\docker-compose.yml
-		..\ECommerce.Microservices\Ports.txt = ..\ECommerce.Microservices\Ports.txt
+		Solution Items\docker cli.txt = Solution Items\docker cli.txt
+		Solution Items\docker-compose.yml = Solution Items\docker-compose.yml
+		Solution Items\Ports.txt = Solution Items\Ports.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{DE8D805A-C411-4AA1-8863-39628E66B7E5}"
@@ -28,9 +28,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{052A97
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{957ADE83-9485-4A4B-8A2A-231E6AB248D8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.Example.CommonUses", "Shared\Microservices.MarketPlace.Example.CommonUses\Microservices.MarketPlace.Example.CommonUses.csproj", "{1A25E55B-5A63-4CB8-8E04-2E33D8FEAC3B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.Example.Basket", "Services\Basket\Microservices.MarketPlace.Example.Basket\Microservices.MarketPlace.Example.Basket.csproj", "{55714FD7-48F1-4A80-AEB4-E0821E58F977}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.Example.Discount", "Services\Discount\Microservices.MarketPlace.Example.Discount\Microservices.MarketPlace.Example.Discount.csproj", "{55E6DA5B-9977-4F8C-9549-F6C09F596C55}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.Example.Image", "Services\Image\Microservices.MarketPlace.Example.Image\Microservices.MarketPlace.Example.Image.csproj", "{28AEEE76-B44B-4E74-984A-DFA27D3538D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.Example.Product", "Services\Product\Microservices.MarketPlace.Example.Product\Microservices.MarketPlace.Example.Product.csproj", "{A28B93C6-FC91-42CC-87B4-BB09EA1443A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.Example.CommonUses", "Shared\Microservices.MarketPlace.Example.CommonUses\Microservices.MarketPlace.Example.CommonUses.csproj", "{F42D1ED7-E22C-4BF3-8252-17A2B6230419}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,14 +48,26 @@ Global
 		{F299ECD1-842B-4375-A600-6BB3258DAD7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F299ECD1-842B-4375-A600-6BB3258DAD7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F299ECD1-842B-4375-A600-6BB3258DAD7F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A25E55B-5A63-4CB8-8E04-2E33D8FEAC3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A25E55B-5A63-4CB8-8E04-2E33D8FEAC3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A25E55B-5A63-4CB8-8E04-2E33D8FEAC3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A25E55B-5A63-4CB8-8E04-2E33D8FEAC3B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{55714FD7-48F1-4A80-AEB4-E0821E58F977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{55714FD7-48F1-4A80-AEB4-E0821E58F977}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55714FD7-48F1-4A80-AEB4-E0821E58F977}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55714FD7-48F1-4A80-AEB4-E0821E58F977}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55E6DA5B-9977-4F8C-9549-F6C09F596C55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E6DA5B-9977-4F8C-9549-F6C09F596C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E6DA5B-9977-4F8C-9549-F6C09F596C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E6DA5B-9977-4F8C-9549-F6C09F596C55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28AEEE76-B44B-4E74-984A-DFA27D3538D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28AEEE76-B44B-4E74-984A-DFA27D3538D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28AEEE76-B44B-4E74-984A-DFA27D3538D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28AEEE76-B44B-4E74-984A-DFA27D3538D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A28B93C6-FC91-42CC-87B4-BB09EA1443A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A28B93C6-FC91-42CC-87B4-BB09EA1443A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A28B93C6-FC91-42CC-87B4-BB09EA1443A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A28B93C6-FC91-42CC-87B4-BB09EA1443A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F42D1ED7-E22C-4BF3-8252-17A2B6230419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F42D1ED7-E22C-4BF3-8252-17A2B6230419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F42D1ED7-E22C-4BF3-8252-17A2B6230419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F42D1ED7-E22C-4BF3-8252-17A2B6230419}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,8 +78,11 @@ Global
 		{4497ED24-D7BD-4B06-8BE1-6F16AF7A4690} = {8B15CC5A-7087-4AD4-A0A6-92EC663828D5}
 		{052A97FB-A10E-463C-8759-DDA21320CEFC} = {8B15CC5A-7087-4AD4-A0A6-92EC663828D5}
 		{957ADE83-9485-4A4B-8A2A-231E6AB248D8} = {8B15CC5A-7087-4AD4-A0A6-92EC663828D5}
-		{1A25E55B-5A63-4CB8-8E04-2E33D8FEAC3B} = {DE8D805A-C411-4AA1-8863-39628E66B7E5}
 		{55714FD7-48F1-4A80-AEB4-E0821E58F977} = {052A97FB-A10E-463C-8759-DDA21320CEFC}
+		{55E6DA5B-9977-4F8C-9549-F6C09F596C55} = {957ADE83-9485-4A4B-8A2A-231E6AB248D8}
+		{28AEEE76-B44B-4E74-984A-DFA27D3538D4} = {4497ED24-D7BD-4B06-8BE1-6F16AF7A4690}
+		{A28B93C6-FC91-42CC-87B4-BB09EA1443A4} = {FB953509-7BCF-4E6D-919E-73C0B001EADE}
+		{F42D1ED7-E22C-4BF3-8252-17A2B6230419} = {DE8D805A-C411-4AA1-8863-39628E66B7E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CD47D357-BBEC-43C6-A8F4-97248C15EDF8}

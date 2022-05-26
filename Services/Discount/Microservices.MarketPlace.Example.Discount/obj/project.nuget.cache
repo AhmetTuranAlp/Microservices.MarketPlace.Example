@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "uN9cZ7/Ouu95v7iqKw0lAeaeaeYW6PEFIyxqppD9B+ZjIgTk/bMJT/gadyLH8q7bg2d7gnglLs/3IwbkpZm7Cg==",
-  "success": false,
+  "dgSpecHash": "sPftpqvnaRxb6k0nlc7QshEr4Z7L8Hw0rrVk3fViVRWclXZqV8+bJgyQ3V65H5AmyHU55dYy/JmHIxpYpBpF2Q==",
+  "success": true,
   "projectFilePath": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Discount\\Microservices.MarketPlace.Example.Discount\\Microservices.MarketPlace.Example.Discount.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
@@ -24,15 +24,5 @@
     "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
     "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Discount\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Discount\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  "logs": []
 }

@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "BUDerjGpCxOL/DxfzZpm70Kvw3i4RQb3K1zvh9OEIb7U+XMtO9AjbE4O1Ocozd3x+n7jNQdWpBYBx75qEOKQhA==",
-  "success": false,
+  "dgSpecHash": "7Rlm8Kt4GgzQiPoo7PiR/+HQ9JUChzx33JKVn5gQuTzOONqANmO4PIkk42s9cxwNapjXNem6ua+l/SiXosIsIQ==",
+  "success": true,
   "projectFilePath": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Basket\\Microservices.MarketPlace.Example.Basket\\Microservices.MarketPlace.Example.Basket.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.4\\microsoft.aspnetcore.authentication.jwtbearer.5.0.4.nupkg.sha512",
@@ -34,15 +34,5 @@
     "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Basket\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Basket\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  "logs": []
 }

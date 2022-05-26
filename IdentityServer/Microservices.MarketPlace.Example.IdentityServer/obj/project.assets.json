@@ -2063,6 +2063,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Microservices.MarketPlace.Example.CommonUses/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Microservices.MarketPlace.Example.CommonUses.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Microservices.MarketPlace.Example.CommonUses.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -6890,11 +6903,17 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Microservices.MarketPlace.Example.CommonUses/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/Microservices.MarketPlace.Example.CommonUses/Microservices.MarketPlace.Example.CommonUses.csproj",
+      "msbuildProject": "../../Shared/Microservices.MarketPlace.Example.CommonUses/Microservices.MarketPlace.Example.CommonUses.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "IdentityServer4.AspNetIdentity >= 4.0.0",
+      "Microservices.MarketPlace.Example.CommonUses >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.Google >= 3.1.5",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.5",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.5",
@@ -6936,7 +6955,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\GithubProject\\Microservices.MarketPlace.Example\\Shared\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj": {
+              "projectPath": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Shared\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

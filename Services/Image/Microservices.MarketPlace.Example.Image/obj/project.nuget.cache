@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "iz4lQhC9LM8oHTpFFiFmYBul4k9R2ZOWok01iOFyrFVOnGv9twxsHThO9stJnr4KQdPojR8HPHR2b4LDCv62cg==",
-  "success": false,
+  "dgSpecHash": "urhwfGfASQ4NlYQvmXZ/Qh4ygWDoQilNQUf3tiPtO6VXW1piuWo2CQNXp5YAzjZMia+JJxoarI95HKu/Tyz6vA==",
+  "success": true,
   "projectFilePath": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Image\\Microservices.MarketPlace.Example.Image\\Microservices.MarketPlace.Example.Image.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.4\\microsoft.aspnetcore.authentication.jwtbearer.5.0.4.nupkg.sha512",
@@ -20,15 +20,5 @@
     "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.7.1\\system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
     "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Image\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Image\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  "logs": []
 }

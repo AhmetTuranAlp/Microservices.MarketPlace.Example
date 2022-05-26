@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "CVAe1Lv65r3VspWKaE/lMyz4NsznP7fBIehRS2xefC8M2m8OXKTl8PnTj3f89P4/+UIoq5F3Od7L0Fh32c1WUA==",
-  "success": false,
+  "dgSpecHash": "prIjGN5gwC/wtR1t6lElLnPdRlsbigdPCIo3T9U4xrlxM+ghJC2eGuYolbl9hFjE7CZydzBD40KLgEjJpuj5vA==",
+  "success": true,
   "projectFilePath": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Product\\Microservices.MarketPlace.Example.Product\\Microservices.MarketPlace.Example.Product.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
@@ -36,15 +36,5 @@
     "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Product\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Product\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  "logs": []
 }

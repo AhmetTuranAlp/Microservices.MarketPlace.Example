@@ -230,6 +230,19 @@
             "rid": "win"
           }
         }
+      },
+      "Microservices.MarketPlace.Example.CommonUses/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Microservices.MarketPlace.Example.CommonUses.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Microservices.MarketPlace.Example.CommonUses.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -667,12 +680,17 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Microservices.MarketPlace.Example.CommonUses/1.0.0": {
+      "type": "project",
+      "path": "../../../Shared/Microservices.MarketPlace.Example.CommonUses/Microservices.MarketPlace.Example.CommonUses.csproj",
+      "msbuildProject": "../../../Shared/Microservices.MarketPlace.Example.CommonUses/Microservices.MarketPlace.Example.CommonUses.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Discount\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj",
       "Dapper.Contrib >= 2.0.78",
+      "Microservices.MarketPlace.Example.CommonUses >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.4",
       "Npgsql >= 5.0.4",
       "Swashbuckle.AspNetCore >= 5.6.3"
@@ -710,8 +728,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Discount\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj": {
-              "projectPath": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Discount\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj"
+            "C:\\GithubProject\\Microservices.MarketPlace.Example\\Shared\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj": {
+              "projectPath": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Shared\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj"
             }
           }
         }
@@ -764,16 +782,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Discount\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Discount\\Microservices.MarketPlace.Example.CommonUses\\Microservices.MarketPlace.Example.CommonUses.csproj",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  }
 }

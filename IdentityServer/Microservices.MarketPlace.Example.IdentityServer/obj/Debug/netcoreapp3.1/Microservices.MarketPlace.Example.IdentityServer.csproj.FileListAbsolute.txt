@@ -81,7 +81,6 @@ C:\GithubProject\Microservices.MarketPlace.Example\IdentityServer\Microservices.
 C:\GithubProject\Microservices.MarketPlace.Example\IdentityServer\Microservices.MarketPlace.Example.IdentityServer\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\GithubProject\Microservices.MarketPlace.Example\IdentityServer\Microservices.MarketPlace.Example.IdentityServer\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\GithubProject\Microservices.MarketPlace.Example\IdentityServer\Microservices.MarketPlace.Example.IdentityServer\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-C:\GithubProject\Microservices.MarketPlace.Example\IdentityServer\Microservices.MarketPlace.Example.IdentityServer\obj\Debug\netcoreapp3.1\Microservices.MarketPlace.Example.IdentityServer.csproj.AssemblyReference.cache
 C:\GithubProject\Microservices.MarketPlace.Example\IdentityServer\Microservices.MarketPlace.Example.IdentityServer\obj\Debug\netcoreapp3.1\Microservices.MarketPlace.Example.IdentityServer.GeneratedMSBuildEditorConfig.editorconfig
 C:\GithubProject\Microservices.MarketPlace.Example\IdentityServer\Microservices.MarketPlace.Example.IdentityServer\obj\Debug\netcoreapp3.1\Microservices.MarketPlace.Example.IdentityServer.AssemblyInfoInputs.cache
 C:\GithubProject\Microservices.MarketPlace.Example\IdentityServer\Microservices.MarketPlace.Example.IdentityServer\obj\Debug\netcoreapp3.1\Microservices.MarketPlace.Example.IdentityServer.AssemblyInfo.cs
