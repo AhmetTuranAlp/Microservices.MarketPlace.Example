@@ -35,7 +35,12 @@
       "ProjectGuid": "567ee468-5efd-4492-9dea-de50578ac404",
       "DisplayName": "Microservices.MarketPlace.Example.Basket",
       "ColorIndex": 5
+    },
+    "d086ed1d-cccd-4cc4-a16f-ace9377498c3": {
+      "ProjectGuid": "d086ed1d-cccd-4cc4-a16f-ace9377498c3",
+      "DisplayName": "Microservices.MarketPlace.Example.Discount",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 7
 }
