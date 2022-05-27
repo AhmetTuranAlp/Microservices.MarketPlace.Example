@@ -136,3 +136,4 @@ C:\GithubProject\Microservices.MarketPlace.Example\IdentityServer\Microservices.
 C:\GithubProject\Microservices.MarketPlace.Example\IdentityServer\Microservices.MarketPlace.Example.IdentityServer\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\GithubProject\Microservices.MarketPlace.Example\IdentityServer\Microservices.MarketPlace.Example.IdentityServer\bin\Debug\netcoreapp3.1\Microservices.MarketPlace.Example.CommonUses.dll
 C:\GithubProject\Microservices.MarketPlace.Example\IdentityServer\Microservices.MarketPlace.Example.IdentityServer\bin\Debug\netcoreapp3.1\Microservices.MarketPlace.Example.CommonUses.pdb
+C:\GithubProject\Microservices.MarketPlace.Example\IdentityServer\Microservices.MarketPlace.Example.IdentityServer\obj\Debug\netcoreapp3.1\Microservices.MarketPlace.Example.IdentityServer.csproj.AssemblyReference.cache

@@ -17,3 +17,4 @@ C:\GithubProject\Microservices.MarketPlace.Example\Shared\Microservices.MarketPl
 C:\GithubProject\Microservices.MarketPlace.Example\Shared\Microservices.MarketPlace.Example.CommonUses\obj\Debug\netcoreapp3.1\Microservices.MarketPlace.Example.CommonUses.csproj.CoreCompileInputs.cache
 C:\GithubProject\Microservices.MarketPlace.Example\Shared\Microservices.MarketPlace.Example.CommonUses\obj\Debug\netcoreapp3.1\Microservices.MarketPlace.Example.CommonUses.dll
 C:\GithubProject\Microservices.MarketPlace.Example\Shared\Microservices.MarketPlace.Example.CommonUses\obj\Debug\netcoreapp3.1\Microservices.MarketPlace.Example.CommonUses.pdb
+C:\GithubProject\Microservices.MarketPlace.Example\Shared\Microservices.MarketPlace.Example.CommonUses\obj\Debug\netcoreapp3.1\Microservices.MarketPlace.Example.CommonUses.csproj.AssemblyReference.cache

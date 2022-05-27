@@ -1,4 +1,4 @@
-using Microservices.MarketPlace.Example.CommonUses.Services;
+﻿using Microservices.MarketPlace.Example.CommonUses.Services;
 using Microservices.MarketPlace.Example.CommonUses.Services.Interfaces;
 using Microservices.MarketPlace.Example.Discount.Services;
 using Microservices.MarketPlace.Example.Discount.Services.Interfaces;
@@ -50,6 +50,7 @@ namespace Microservices.MarketPlace.Example.Discount
             {
                 opt.Filters.Add(new AuthorizeFilter(requireAuthorizePolicy));
             });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Microservices.MarketPlace.Example.Discount", Version = "v1" });

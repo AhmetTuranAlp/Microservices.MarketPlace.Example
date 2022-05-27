@@ -18,6 +18,7 @@ namespace Microservices.MarketPlace.Example.IdentityServer
             new ApiResource("resource_image"){Scopes={"image_cdn_fullpermission"}},
             new ApiResource("resource_basket"){Scopes={"basket_fullpermission"}},
             new ApiResource("resource_discount"){Scopes={"discount_fullpermission"}},
+              new ApiResource("payment_discount"){Scopes={"payment_fullpermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
 };
 
@@ -38,6 +39,7 @@ namespace Microservices.MarketPlace.Example.IdentityServer
             new ApiScope("image_cdn_fullpermission","Image CDN API için full erişim"),
             new ApiScope("basket_fullpermission","Basket API için full erişim"),
             new ApiScope("discount_fullpermission","Discount API için full erişim"),
+            new ApiScope("payment_fullpermission","Payment API için full erişim"),
             new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -62,7 +64,7 @@ namespace Microservices.MarketPlace.Example.IdentityServer
                 //AllowedScopes = Kullanıcı token aldıgında token ile beraber hangi bilgilere erişebileceği tanımlanmıştır.
                 AllowedScopes=
                 {
-                  "basket_fullpermission",
+                  "basket_fullpermission","discount_fullpermission","payment_fullpermission",
                   IdentityServerConstants.StandardScopes.Email,
                   IdentityServerConstants.StandardScopes.OpenId,
                   IdentityServerConstants.StandardScopes.Profile,
@@ -73,15 +75,15 @@ namespace Microservices.MarketPlace.Example.IdentityServer
                 RefreshTokenExpiration=TokenExpiration.Absolute, //RefreshToken istedikçe ömrü artılılaması saglanmaktadır.
                 AbsoluteRefreshTokenLifetime= (int) (DateTime.Now.AddDays(60)- DateTime.Now).TotalSeconds,//RefreshToken ömrü belirlenmekte 
                 RefreshTokenUsage= TokenUsage.ReUse //RefreshToken kullanım durumu belirlenmektedir. Tekrar kullanılabilir yapılmıştır.
-            },
-            new Client
-            {
-                ClientName="Token Exchange Client",
-                ClientId="TokenExhangeClient",
-                ClientSecrets= {new Secret("UIClientPassword".Sha256())},
-                AllowedGrantTypes= new []{ "urn:ietf:params:oauth:grant-type:token-exchange" },
-                AllowedScopes={ "discount_fullpermission", "payment_fullpermission", IdentityServerConstants.StandardScopes.OpenId }
-            },
+            }
+            //new Client
+            //{
+            //    ClientName="Token Exchange Client",
+            //    ClientId="TokenExhangeClient",
+            //    ClientSecrets= {new Secret("UIClientPassword".Sha256())},
+            //    AllowedGrantTypes= new []{ "urn:ietf:params:oauth:grant-type:token-exchange" },
+            //    AllowedScopes={ "discount_fullpermission", "payment_fullpermission", IdentityServerConstants.StandardScopes.OpenId }
+            //},
         };
     }
 }

@@ -40,7 +40,47 @@
       "ProjectGuid": "d086ed1d-cccd-4cc4-a16f-ace9377498c3",
       "DisplayName": "Microservices.MarketPlace.Example.Discount",
       "ColorIndex": 6
+    },
+    "1a25e55b-5a63-4cb8-8e04-2e33d8feac3b": {
+      "ProjectGuid": "1a25e55b-5a63-4cb8-8e04-2e33d8feac3b",
+      "DisplayName": "Microservices.MarketPlace.Example.CommonUses",
+      "ColorIndex": 7
+    },
+    "56092500-6663-452a-9af3-d0720fd27a8b": {
+      "ProjectGuid": "56092500-6663-452a-9af3-d0720fd27a8b",
+      "DisplayName": "Microservices.MarketPlace.Example.Discount",
+      "ColorIndex": 8
+    },
+    "55714fd7-48f1-4a80-aeb4-e0821e58f977": {
+      "ProjectGuid": "55714fd7-48f1-4a80-aeb4-e0821e58f977",
+      "DisplayName": "Microservices.MarketPlace.Example.Basket",
+      "ColorIndex": 9
+    },
+    "a28b93c6-fc91-42cc-87b4-bb09ea1443a4": {
+      "ProjectGuid": "a28b93c6-fc91-42cc-87b4-bb09ea1443a4",
+      "DisplayName": "Microservices.MarketPlace.Example.Product",
+      "ColorIndex": 10
+    },
+    "28aeee76-b44b-4e74-984a-dfa27d3538d4": {
+      "ProjectGuid": "28aeee76-b44b-4e74-984a-dfa27d3538d4",
+      "DisplayName": "Microservices.MarketPlace.Example.Image",
+      "ColorIndex": 11
+    },
+    "55e6da5b-9977-4f8c-9549-f6c09f596c55": {
+      "ProjectGuid": "55e6da5b-9977-4f8c-9549-f6c09f596c55",
+      "DisplayName": "Microservices.MarketPlace.Example.Discount",
+      "ColorIndex": 12
+    },
+    "f42d1ed7-e22c-4bf3-8252-17a2b6230419": {
+      "ProjectGuid": "f42d1ed7-e22c-4bf3-8252-17a2b6230419",
+      "DisplayName": "Microservices.MarketPlace.Example.CommonUses",
+      "ColorIndex": 13
+    },
+    "eafa8cf7-d13a-477b-a34a-59a263315fac": {
+      "ProjectGuid": "eafa8cf7-d13a-477b-a34a-59a263315fac",
+      "DisplayName": "Microservices.MarketPlace.Example.Payment",
+      "ColorIndex": 14
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 15
 }

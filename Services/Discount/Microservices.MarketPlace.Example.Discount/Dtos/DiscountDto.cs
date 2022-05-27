@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace Microservices.MarketPlace.Example.Discount.Models
+namespace Microservices.MarketPlace.Example.Discount.Dtos
 {
     [Dapper.Contrib.Extensions.Table("discount")]
-    public class Discount
+    public class DiscountDto
     {
         public int Id { get; set; }
         public string UserId { get; set; }

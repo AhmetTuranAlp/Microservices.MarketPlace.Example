@@ -26,7 +26,6 @@ namespace Microservices.MarketPlace.Example.Discount.Controllers
             return CreateActionResultInstance(await _discountService.GetAll());
         }
 
-        //api/discounts/4
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -38,7 +37,6 @@ namespace Microservices.MarketPlace.Example.Discount.Controllers
         [HttpGet]
         [Route("/api/[controller]/[action]/{code}")]
         public async Task<IActionResult> GetByCode(string code)
-
         {
             var userId = _sharedIdentityService.GetUserId;
 
@@ -48,13 +46,13 @@ namespace Microservices.MarketPlace.Example.Discount.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Save(Models.Discount discount)
+        public async Task<IActionResult> Save(Dtos.DiscountDto discount)
         {
             return CreateActionResultInstance(await _discountService.Save(discount));
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(Models.Discount discount)
+        public async Task<IActionResult> Update(Dtos.DiscountDto discount)
         {
             return CreateActionResultInstance(await _discountService.Update(discount));
         }
