@@ -1,0 +1,3 @@
+﻿+Application katmanı UI ile haberleşen katmandır. Dto classları bu katman üzerinde tanımlaması yapılmaktadır.
++Application katmanında DI container olmadıgı için static olarak ObjectMapper clası üzerinden map işlemi yapılacaktır. Lazy sınıfını kullanarak sadece istenildiği zaman ObjectMapper clası new işlemi gerçekleşecek.
++MediatR libraly ile Select, Insert, Update, Delete gibi commandlerin ayrılması yapılmaktadır. Queries klasörü altında db üzerinde sorgulama yapılan sorgular yazılmaktadır. Commands klasörü altında ise db üzerinde Insert, Update, Delete commandleri yazılmaktadır.

@@ -1,0 +1,5 @@
+﻿+ValueObject: Bir Id ile işaretlenmeyen kimliksiz classlar miras almaktadır. ValueObject içierisinde bir çok yerde kullanılan metodlar tanımlanmaktadır. Özellikle yardımcı karşılaştırma metodları bulunması faydalıdır.
+
++Entity: Bir Id ile işaretlenen kimlik sahibi classlar miras almaktadır. Entity içierisinde bir çok yerde kullanılan metodlar tanımlanmaktadır. Özellikle yardımcı karşılaştırma metodları bulunması faydalıdır.
+
++IAggregateRoot: Aggregate sınıfları işaretlemek amaçlı oluşturulmuştur.

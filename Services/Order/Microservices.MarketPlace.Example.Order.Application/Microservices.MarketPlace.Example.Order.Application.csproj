@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.1.7" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="7.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\Microservices.MarketPlace.Example.CommonUses\Microservices.MarketPlace.Example.CommonUses.csproj" />
+    <ProjectReference Include="..\Microservices.MarketPlace.Example.Order.Domain\Microservices.MarketPlace.Example.Order.Domain.csproj" />
+    <ProjectReference Include="..\Microservices.MarketPlace.Example.Order.Infrastructure\Microservices.MarketPlace.Example.Order.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

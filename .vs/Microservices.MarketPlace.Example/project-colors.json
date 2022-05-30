@@ -80,7 +80,57 @@
       "ProjectGuid": "eafa8cf7-d13a-477b-a34a-59a263315fac",
       "DisplayName": "Microservices.MarketPlace.Example.Payment",
       "ColorIndex": 14
+    },
+    "11835a47-1903-49c8-896e-795c4821fa4d": {
+      "ProjectGuid": "11835a47-1903-49c8-896e-795c4821fa4d",
+      "DisplayName": "Microservices.MarketPlace.Example.Order.Application",
+      "ColorIndex": 15
+    },
+    "4fb4597a-bd59-4557-813b-e1b8560c5831": {
+      "ProjectGuid": "4fb4597a-bd59-4557-813b-e1b8560c5831",
+      "DisplayName": "Microservices.MarketPlace.Example.Order.API",
+      "ColorIndex": 0
+    },
+    "9e4a0a7a-5a04-44f6-9ad7-29acc46b9d8a": {
+      "ProjectGuid": "9e4a0a7a-5a04-44f6-9ad7-29acc46b9d8a",
+      "DisplayName": "Microservices.MarketPlace.Example.Order.Domain",
+      "ColorIndex": 1
+    },
+    "c3454c72-efe1-4986-842c-b9a5f4dbee0d": {
+      "ProjectGuid": "c3454c72-efe1-4986-842c-b9a5f4dbee0d",
+      "DisplayName": "Microservices.MarketPlace.Example.Order.Core",
+      "ColorIndex": 2
+    },
+    "68a3ab41-1b16-4d93-b7c0-b70f37214655": {
+      "ProjectGuid": "68a3ab41-1b16-4d93-b7c0-b70f37214655",
+      "DisplayName": "Microservices.MarketPlace.Example.Order.Infrastructure",
+      "ColorIndex": 3
+    },
+    "e59c0319-99b6-4048-b42e-c7b4785bc53c": {
+      "ProjectGuid": "e59c0319-99b6-4048-b42e-c7b4785bc53c",
+      "DisplayName": "Microservices.MarketPlace.Example.Order.API",
+      "ColorIndex": 4
+    },
+    "e176bd9b-82e0-4b27-b8c1-543c7460ccd9": {
+      "ProjectGuid": "e176bd9b-82e0-4b27-b8c1-543c7460ccd9",
+      "DisplayName": "Microservices.MarketPlace.Example.Order.Application",
+      "ColorIndex": 5
+    },
+    "43575233-d366-4ef8-ab5e-0ef960a6dfd4": {
+      "ProjectGuid": "43575233-d366-4ef8-ab5e-0ef960a6dfd4",
+      "DisplayName": "Microservices.MarketPlace.Example.Order.Core",
+      "ColorIndex": 6
+    },
+    "7aa53545-6240-43c7-ad7c-09e70512137a": {
+      "ProjectGuid": "7aa53545-6240-43c7-ad7c-09e70512137a",
+      "DisplayName": "Microservices.MarketPlace.Example.Order.Domain",
+      "ColorIndex": 7
+    },
+    "9f041ccd-3311-47a9-955e-09fc6dc8e4dc": {
+      "ProjectGuid": "9f041ccd-3311-47a9-955e-09fc6dc8e4dc",
+      "DisplayName": "Microservices.MarketPlace.Example.Order.Infrastructure",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 15
+  "NextColorIndex": 9
 }

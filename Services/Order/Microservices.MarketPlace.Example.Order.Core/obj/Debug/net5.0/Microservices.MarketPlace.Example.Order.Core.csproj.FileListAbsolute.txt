@@ -1,0 +1,12 @@
+C:\GithubProject\Microservices.MarketPlace.Example\Services\Order\Microservices.MarketPlace.Example.Order.Core\bin\Debug\net5.0\Microservices.MarketPlace.Example.Order.Core.deps.json
+C:\GithubProject\Microservices.MarketPlace.Example\Services\Order\Microservices.MarketPlace.Example.Order.Core\bin\Debug\net5.0\Microservices.MarketPlace.Example.Order.Core.dll
+C:\GithubProject\Microservices.MarketPlace.Example\Services\Order\Microservices.MarketPlace.Example.Order.Core\bin\Debug\net5.0\ref\Microservices.MarketPlace.Example.Order.Core.dll
+C:\GithubProject\Microservices.MarketPlace.Example\Services\Order\Microservices.MarketPlace.Example.Order.Core\bin\Debug\net5.0\Microservices.MarketPlace.Example.Order.Core.pdb
+C:\GithubProject\Microservices.MarketPlace.Example\Services\Order\Microservices.MarketPlace.Example.Order.Core\obj\Debug\net5.0\Microservices.MarketPlace.Example.Order.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\GithubProject\Microservices.MarketPlace.Example\Services\Order\Microservices.MarketPlace.Example.Order.Core\obj\Debug\net5.0\Microservices.MarketPlace.Example.Order.Core.AssemblyInfoInputs.cache
+C:\GithubProject\Microservices.MarketPlace.Example\Services\Order\Microservices.MarketPlace.Example.Order.Core\obj\Debug\net5.0\Microservices.MarketPlace.Example.Order.Core.AssemblyInfo.cs
+C:\GithubProject\Microservices.MarketPlace.Example\Services\Order\Microservices.MarketPlace.Example.Order.Core\obj\Debug\net5.0\Microservices.MarketPlace.Example.Order.Core.csproj.CoreCompileInputs.cache
+C:\GithubProject\Microservices.MarketPlace.Example\Services\Order\Microservices.MarketPlace.Example.Order.Core\obj\Debug\net5.0\Microservices.MarketPlace.Example.Order.Core.dll
+C:\GithubProject\Microservices.MarketPlace.Example\Services\Order\Microservices.MarketPlace.Example.Order.Core\obj\Debug\net5.0\ref\Microservices.MarketPlace.Example.Order.Core.dll
+C:\GithubProject\Microservices.MarketPlace.Example\Services\Order\Microservices.MarketPlace.Example.Order.Core\obj\Debug\net5.0\Microservices.MarketPlace.Example.Order.Core.pdb
+C:\GithubProject\Microservices.MarketPlace.Example\Services\Order\Microservices.MarketPlace.Example.Order.Core\obj\Debug\net5.0\Microservices.MarketPlace.Example.Order.Core.csproj.AssemblyReference.cache

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "L94veDNgzEQP+Oq7lD0vMv1IXWnVCPuHy0XtyJ91LYxqlNAkI68Fui3aWwsk5HClZa7qll/hTKzfFmlm+TDzVQ==",
+  "success": true,
+  "projectFilePath": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Order\\Microservices.MarketPlace.Example.Order.Domain\\Microservices.MarketPlace.Example.Order.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\Ahmet Turan Alp\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

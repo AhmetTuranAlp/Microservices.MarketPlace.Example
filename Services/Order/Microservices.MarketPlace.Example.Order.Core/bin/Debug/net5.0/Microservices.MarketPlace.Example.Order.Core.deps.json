@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Microservices.MarketPlace.Example.Order.Core/1.0.0": {
+        "runtime": {
+          "Microservices.MarketPlace.Example.Order.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microservices.MarketPlace.Example.Order.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

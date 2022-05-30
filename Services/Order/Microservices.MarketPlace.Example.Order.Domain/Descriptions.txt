@@ -1,0 +1,3 @@
+﻿+Domain katmanı olabildiğince yalın ve bagımlılığı olmayan bir yapıda tasarlanmalıdır. Herhangi bir katman ile ilşkisi az olmalıdır. Sadece c# kodları ile kodlama yapılmaya özen gösterilmelidir.
+
++EF Core ile beraber bazı yeni yapılar kullanılmıştır.Shadow property, Owned Entity, Backing Fields yapıları kullanılmıştır. Owned EntityInfrastructure katmanında OrderDbContext classı içerisinde kullanılmıştır. Nedeni ise Domain katmanını olabildiğince sızıntı olmadan yalın olarak kodlamak içindir. Ayrıca genel bir yerden kullanımı yapmak içindir.
