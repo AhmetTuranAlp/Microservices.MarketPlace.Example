@@ -54,6 +54,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.Example.Order.Infrastructure", "Services\Order\Microservices.MarketPlace.Example.Order.Infrastructure\Microservices.MarketPlace.Example.Order.Infrastructure.csproj", "{9F041CCD-3311-47A9-955E-09FC6DC8E4DC}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.MarketPlace.Example.Gateway", "Gateways\Microservices.MarketPlace.Example.Gateway\Microservices.MarketPlace.Example.Gateway.csproj", "{AFBF4305-E0F4-4CDB-A99A-1E11FB68AAD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -108,6 +110,10 @@ Global
 		{9F041CCD-3311-47A9-955E-09FC6DC8E4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F041CCD-3311-47A9-955E-09FC6DC8E4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F041CCD-3311-47A9-955E-09FC6DC8E4DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFBF4305-E0F4-4CDB-A99A-1E11FB68AAD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFBF4305-E0F4-4CDB-A99A-1E11FB68AAD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFBF4305-E0F4-4CDB-A99A-1E11FB68AAD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFBF4305-E0F4-4CDB-A99A-1E11FB68AAD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,6 +137,7 @@ Global
 		{43575233-D366-4EF8-AB5E-0EF960A6DFD4} = {FBEB5B94-0488-4ADD-9CD7-26DB03EB736D}
 		{7AA53545-6240-43C7-AD7C-09E70512137A} = {FBEB5B94-0488-4ADD-9CD7-26DB03EB736D}
 		{9F041CCD-3311-47A9-955E-09FC6DC8E4DC} = {FBEB5B94-0488-4ADD-9CD7-26DB03EB736D}
+		{AFBF4305-E0F4-4CDB-A99A-1E11FB68AAD2} = {AA2BC5E9-F959-4586-BCE4-DE01C2CF0B2C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CD47D357-BBEC-43C6-A8F4-97248C15EDF8}

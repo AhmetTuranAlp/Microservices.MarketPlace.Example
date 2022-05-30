@@ -20,6 +20,7 @@ namespace Microservices.MarketPlace.Example.IdentityServer
             new ApiResource("resource_discount"){Scopes={"discount_fullpermission"}},
             new ApiResource("resource_order"){Scopes={"order_fullpermission"}},
             new ApiResource("resource_payment"){Scopes={"payment_fullpermission"}},
+            new ApiResource("resource_gateway"){Scopes={"gateway_fullpermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
 };
 
@@ -42,6 +43,7 @@ namespace Microservices.MarketPlace.Example.IdentityServer
             new ApiScope("discount_fullpermission","Discount API için full erişim"),
             new ApiScope("order_fullpermission","Order API için full erişim"),
             new ApiScope("payment_fullpermission","Payment API için full erişim"),
+            new ApiScope("gateway_fullpermission","Gateway API için full erişim"),
             new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -54,7 +56,7 @@ namespace Microservices.MarketPlace.Example.IdentityServer
                 ClientId="UIClient",
                 ClientSecrets= {new Secret("UIClientPassword".Sha256())},
                 AllowedGrantTypes= GrantTypes.ClientCredentials,
-                AllowedScopes={ "product_fullpermission", "image_cdn_fullpermission", IdentityServerConstants.LocalApi.ScopeName }
+                AllowedScopes={ "product_fullpermission", "image_cdn_fullpermission", "gateway_fullpermission", IdentityServerConstants.LocalApi.ScopeName }
             },
             new Client
             {
@@ -84,7 +86,7 @@ namespace Microservices.MarketPlace.Example.IdentityServer
                 ClientId="TokenExhangeClient",
                 ClientSecrets= {new Secret("UIClientPassword".Sha256())},
                 AllowedGrantTypes= new []{ "urn:ietf:params:oauth:grant-type:token-exchange" },
-                AllowedScopes={ "discount_fullpermission", "payment_ful lpermission", IdentityServerConstants.StandardScopes.OpenId }
+                AllowedScopes={ "discount_fullpermission", "payment_fullpermission", IdentityServerConstants.StandardScopes.OpenId }
             },
         };
     }

@@ -1,0 +1,3 @@
+﻿+Gateway: Microservice mimaride bir client den gelen isteği ilgili microservice yönlendirmekten(rootlamak) sorumlu olan yapıdır. Büyük bir middeware olarak düşünülebilir. Microservice'lere direk erişmek yerine gateway üzerinden erişecektir. Ara bir katman oldugu için avantajları vardır. Bunlar Authorization, Caching, Logging, Rate limiting, Load Balance gibi işlemleri direk olarak gateway üzerinde yapılacaktır.
+
++Ocelot Library: Microservicelere gelen istekleri ocelot ile gateway üzerinden yönlendirmeler yapılmaktadır.
