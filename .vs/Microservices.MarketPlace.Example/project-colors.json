@@ -130,7 +130,22 @@
       "ProjectGuid": "9f041ccd-3311-47a9-955e-09fc6dc8e4dc",
       "DisplayName": "Microservices.MarketPlace.Example.Order.Infrastructure",
       "ColorIndex": 8
+    },
+    "6bec6415-978e-4e61-ba58-2a8b4fae4da6": {
+      "ProjectGuid": "6bec6415-978e-4e61-ba58-2a8b4fae4da6",
+      "DisplayName": "Microservices.MarketPlace.Example.Gateway",
+      "ColorIndex": 9
+    },
+    "afbf4305-e0f4-4cdb-a99a-1e11fb68aad2": {
+      "ProjectGuid": "afbf4305-e0f4-4cdb-a99a-1e11fb68aad2",
+      "DisplayName": "Microservices.MarketPlace.Example.Gateway",
+      "ColorIndex": 10
+    },
+    "1c5d6da8-680c-4f3c-b155-151e9cbfe9cc": {
+      "ProjectGuid": "1c5d6da8-680c-4f3c-b155-151e9cbfe9cc",
+      "DisplayName": "Microservices.MarketPlace.Example.Web",
+      "ColorIndex": 11
     }
   },
-  "NextColorIndex": 9
+  "NextColorIndex": 12
 }
