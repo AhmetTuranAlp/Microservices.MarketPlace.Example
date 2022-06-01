@@ -7,14 +7,14 @@ namespace Microservices.MarketPlace.Example.CommonUses.Result
     public static class StaticValue
     {
         #region return message
-        public static string _error = "error";
+        public static string _error = "errors";
         public static string _productNotFound = "Product not found";
         public static string _imageNotFound = "Image not found";
         public static string _basketNotFound = "Basket not found";
         public static string _discountNotFound = "Discount not found";
         public static string _discountAddError = "an error occurred while adding";
         public static string _imageEmpty = "Image is empty";
-        public static string _emailorPasswordIncorrect = "Email or Password Incorrect";
+        public static string _emailorPasswordIncorrect = "Email veya Şifreniz Yanlış";
         public static string _basketCouldNot = "Basket could not update or save";
         #endregion
 
