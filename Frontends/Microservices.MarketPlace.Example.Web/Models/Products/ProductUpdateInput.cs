@@ -6,6 +6,7 @@ namespace Microservices.MarketPlace.Example.Web.Models.Products
     public class ProductUpdateInput
     {
         public string Id { get; set; }
+        public string ProductId { get; set; }
 
         [Display(Name = "Ürün ismi")]
         public string Name { get; set; }

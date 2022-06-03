@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace Microservices.MarketPlace.Example.Web.Handler
 {
+    /// <summary>
+    /// Token bilgisi cookie üzerinde tutulmasını saglamaktadır.
+    /// </summary>
     public class ResourceOwnerPasswordTokenHandler : DelegatingHandler
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
@@ -23,6 +26,13 @@ namespace Microservices.MarketPlace.Example.Web.Handler
             _logger = logger;
         }
 
+        /// <summary>
+        /// İşlemler için Token bilgisi otomatik olarak bu class ile alınmaktadır.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        /// <exception cref="UnAuthorizeException"></exception>
         protected async override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             var accessToken = await _httpContextAccessor.HttpContext.GetTokenAsync(OpenIdConnectParameterNames.AccessToken);

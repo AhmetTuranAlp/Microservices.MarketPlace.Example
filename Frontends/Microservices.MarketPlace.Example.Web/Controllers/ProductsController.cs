@@ -66,10 +66,10 @@ namespace Microservices.MarketPlace.Example.Web.Controllers
                 Id = product.Id,
                 Name = product.Name,
                 Description = product.Description,
-                Price = product.Price,
-                CategoryId = product.CategoryId,
+                Price = product.SalePrice,
+                CategoryId = product.Category.Id,
                 UserId = product.UserId,
-                Picture = product.Picture
+                Picture = product.Image
             };
 
             return View(productUpdateInput);

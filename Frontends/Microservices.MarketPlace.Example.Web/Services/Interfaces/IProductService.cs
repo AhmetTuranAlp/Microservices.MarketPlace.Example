@@ -10,6 +10,8 @@ namespace Microservices.MarketPlace.Example.Web.Services.Interfaces
 
         Task<List<CategoryViewModel>> GetAllCategoryAsync();
 
+        Task<List<CategoryViewModel>> GetAllBrandAsync();
+
         Task<List<ProductViewModel>> GetAllProductByUserIdAsync(string userId);
 
         Task<ProductViewModel> GetByProductId(string productId);

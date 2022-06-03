@@ -29,7 +29,7 @@ namespace Microservices.MarketPlace.Example.Web.Controllers
         {
             var product = await _productService.GetByProductId(productId);
 
-            var basketItem = new BasketItemViewModel { ProductId = product.Id, ProductName = product.Name, Price = product.Price };
+            var basketItem = new BasketItemViewModel { ProductId = product.Id, ProductName = product.Name, Price = product.SalePrice };
 
             await _basketService.AddBasketItem(basketItem);
 

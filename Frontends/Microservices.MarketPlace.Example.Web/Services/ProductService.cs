@@ -44,6 +44,20 @@ namespace Microservices.MarketPlace.Example.Web.Services
             return response.IsSuccessStatusCode;
         }
 
+        public async Task<List<CategoryViewModel>> GetAllBrandAsync()
+        {
+            var response = await _client.GetAsync("brands");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return null;
+            }
+
+            var responseSuccess = await response.Content.ReadFromJsonAsync<Response<List<CategoryViewModel>>>();
+
+            return responseSuccess.Data;
+        }
+
         public async Task<List<CategoryViewModel>> GetAllCategoryAsync()
         {
             var response = await _client.GetAsync("categories");
@@ -70,7 +84,7 @@ namespace Microservices.MarketPlace.Example.Web.Services
             var responseSuccess = await response.Content.ReadFromJsonAsync<Response<List<ProductViewModel>>>();
             responseSuccess.Data.ForEach(x =>
             {
-                x.StockPictureUrl = _imageHelper.GetPhotoStockUrl(x.Picture);
+                x.StockPictureUrl = _imageHelper.GetPhotoStockUrl(x.Image);
             });
             return responseSuccess.Data;
         }
@@ -88,7 +102,7 @@ namespace Microservices.MarketPlace.Example.Web.Services
 
             responseSuccess.Data.ForEach(x =>
             {
-                x.StockPictureUrl = _imageHelper.GetPhotoStockUrl(x.Picture);
+                x.StockPictureUrl = _imageHelper.GetPhotoStockUrl(x.Image);
             });
 
             return responseSuccess.Data;
@@ -105,7 +119,7 @@ namespace Microservices.MarketPlace.Example.Web.Services
 
             var responseSuccess = await response.Content.ReadFromJsonAsync<Response<ProductViewModel>>();
 
-            responseSuccess.Data.StockPictureUrl = _imageHelper.GetPhotoStockUrl(responseSuccess.Data.Picture);
+            responseSuccess.Data.StockPictureUrl = _imageHelper.GetPhotoStockUrl(responseSuccess.Data.Image);
 
             return responseSuccess.Data;
         }

@@ -9,11 +9,13 @@ namespace Microservices.MarketPlace.Example.Product.Models
 {
     public class Product : Base
     {
+        public string UserId { get; set; }
         public string Name { get; set; }
         public string ProductId { get; set; }
         public string ShortDescription { get; set; }
         public string Description { get; set; }
-        public List<string> Images { get; set; }
+        public string Image { get; set; }
+        public string StockPictureUrl { get; set; }
         public Brand Brand { get; set; }
         public Category Category { get; set; }
 
@@ -40,5 +42,6 @@ namespace Microservices.MarketPlace.Example.Product.Models
         public int Stock { get; set; }
 
         public Currency.CurrencyType CurrencyType { get; set; }
+
     }
 }
