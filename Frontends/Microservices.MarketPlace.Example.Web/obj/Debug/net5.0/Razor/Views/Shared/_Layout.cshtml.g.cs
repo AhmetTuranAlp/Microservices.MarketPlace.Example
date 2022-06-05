@@ -26,8 +26,50 @@ using Microservices.MarketPlace.Example.Web.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\GithubProject\Microservices.MarketPlace.Example\Frontends\Microservices.MarketPlace.Example.Web\Views\_ViewImports.cshtml"
+using Microservices.MarketPlace.Example.Web.Models.Baskets;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\GithubProject\Microservices.MarketPlace.Example\Frontends\Microservices.MarketPlace.Example.Web\Views\_ViewImports.cshtml"
+using Microservices.MarketPlace.Example.Web.Models.Discounts;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\GithubProject\Microservices.MarketPlace.Example\Frontends\Microservices.MarketPlace.Example.Web\Views\_ViewImports.cshtml"
+using Microservices.MarketPlace.Example.Web.Models.Images;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\GithubProject\Microservices.MarketPlace.Example\Frontends\Microservices.MarketPlace.Example.Web\Views\_ViewImports.cshtml"
+using Microservices.MarketPlace.Example.Web.Models.Orders;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "C:\GithubProject\Microservices.MarketPlace.Example\Frontends\Microservices.MarketPlace.Example.Web\Views\_ViewImports.cshtml"
+using Microservices.MarketPlace.Example.Web.Models.Payments;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "C:\GithubProject\Microservices.MarketPlace.Example\Frontends\Microservices.MarketPlace.Example.Web\Views\_ViewImports.cshtml"
+using Microservices.MarketPlace.Example.Web.Models.Products;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"778918ec43f9fe541128f649444ab5a4de37e293", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4654dee1c6223e0df00342bb7818ead8ca9c06d1", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"98788e1ff722484c07406582cd3ea8245202f2f0", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("href", new global::Microsoft.AspNetCore.Html.HtmlString("~/lib/bootstrap-5.0/css/bootstrap.min.css"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -79,7 +121,7 @@ using Microservices.MarketPlace.Example.Web.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29310409", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29312007", async() => {
                 WriteLiteral("\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>");
 #nullable restore
 #line 6 "C:\GithubProject\Microservices.MarketPlace.Example\Frontends\Microservices.MarketPlace.Example.Web\Views\Shared\_Layout.cshtml"
@@ -89,7 +131,7 @@ using Microservices.MarketPlace.Example.Web.Models;
 #line hidden
 #nullable disable
                 WriteLiteral(" - Microservices.MarketPlace.Example.Web</title>\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "778918ec43f9fe541128f649444ab5a4de37e29311128", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "778918ec43f9fe541128f649444ab5a4de37e29312726", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -104,7 +146,7 @@ using Microservices.MarketPlace.Example.Web.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "778918ec43f9fe541128f649444ab5a4de37e29312307", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "778918ec43f9fe541128f649444ab5a4de37e29313905", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -131,9 +173,9 @@ using Microservices.MarketPlace.Example.Web.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29314190", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29315788", async() => {
                 WriteLiteral("\r\n    <header>\r\n        <nav class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\">\r\n            <div class=\"container\">\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29314646", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29316244", async() => {
                     WriteLiteral("Microservices.MarketPlace.Example.Web");
                 }
                 );
@@ -162,7 +204,7 @@ using Microservices.MarketPlace.Example.Web.Models;
                     <ul class=""navbar-nav flex-grow-1"">
                         <li class=""nav-item"">
                             ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29316980", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29318578", async() => {
                     WriteLiteral("Home");
                 }
                 );
@@ -204,7 +246,7 @@ using Microservices.MarketPlace.Example.Web.Models;
 #line hidden
 #nullable disable
                 WriteLiteral("\r\n                                   </a>\r\n                                   <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n                                       <li>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29319902", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29321500", async() => {
                     WriteLiteral("Profil");
                 }
                 );
@@ -223,7 +265,7 @@ using Microservices.MarketPlace.Example.Web.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("</li>\r\n                                       <li>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29321471", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29323069", async() => {
                     WriteLiteral("Ödeme geçmişim");
                 }
                 );
@@ -242,7 +284,7 @@ using Microservices.MarketPlace.Example.Web.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("</li>\r\n                                       <li>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29323052", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29324650", async() => {
                     WriteLiteral("Sepet");
                 }
                 );
@@ -261,7 +303,7 @@ using Microservices.MarketPlace.Example.Web.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("</li>\r\n                                       <li>");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29324622", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29326220", async() => {
                     WriteLiteral("Çıkış");
                 }
                 );
@@ -291,7 +333,7 @@ using Microservices.MarketPlace.Example.Web.Models;
 #line hidden
 #nullable disable
                 WriteLiteral("                           ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29326615", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29328213", async() => {
                     WriteLiteral("Giriş yap");
                 }
                 );
@@ -328,7 +370,7 @@ using Microservices.MarketPlace.Example.Web.Models;
 #line hidden
 #nullable disable
                 WriteLiteral("\r\n        </main>\r\n    </div>\r\n\r\n    <footer class=\"border-top footer text-muted\">\r\n        <div class=\"container\">\r\n            &copy; 2022 - Microservices.MarketPlace.Example.Web - ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29329263", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29330861", async() => {
                     WriteLiteral("Privacy");
                 }
                 );
@@ -348,7 +390,7 @@ using Microservices.MarketPlace.Example.Web.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n        </div>\r\n    </footer>\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29330947", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29332545", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -362,7 +404,7 @@ using Microservices.MarketPlace.Example.Web.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29332048", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29333646", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -376,7 +418,7 @@ using Microservices.MarketPlace.Example.Web.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29333149", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778918ec43f9fe541128f649444ab5a4de37e29334747", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

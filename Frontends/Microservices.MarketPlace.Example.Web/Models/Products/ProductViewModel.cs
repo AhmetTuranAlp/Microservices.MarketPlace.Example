@@ -10,10 +10,7 @@ namespace Microservices.MarketPlace.Example.Web.Models.Products
         public string ProductId { get; set; }
         public string Description { get; set; }
 
-        public string ShortDescription
-        {
-            get => Description.Length > 100 ? Description.Substring(0, 100) + "..." : Description;
-        }
+        public string ShortDescription { get; set; }
 
         public string StockPictureUrl { get; set; }
         public string Image { get; set; }

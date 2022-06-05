@@ -3,24 +3,33 @@
     ViewData["Title"] = "Create";
 }
 
-@model Microservices.MarketPlace.Example.Web.Models.Products.ProductCreateInput
+@model ProductCreateInput
 <div class="row">
     <div class="col-md-8 offset-md-2">
 
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Ürün ekleme </h5>
+                <h5 class="card-title">Ürün Ekleme </h5>
 
                 <form asp-controller="Products" asp-action="Create" method="post" enctype="multipart/form-data">
                     <div asp-validation-summary="ModelOnly"></div>
 
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label" asp-for="CategoryId"></label>
+                        <label for="CategoryId" id="CategoryId" class="form-label" asp-for="CategoryId"></label>
                         <select asp-for="CategoryId" class="form-control" asp-items="@ViewBag.categoryList">
-                            <option value="">kategori seçiniz</option>
+                            <option value="">Kategori seçiniz</option>
                         </select>
 
                         <span class="text-danger" asp-validation-for="CategoryId"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="BrandId" id="BrandId" class="form-label" asp-for="BrandId"></label>
+                        <select asp-for="BrandId" class="form-control" asp-items="@ViewBag.brandList">
+                            <option value="">Marka seçiniz</option>
+                        </select>
+
+                        <span class="text-danger" asp-validation-for="BrandId"></span>
                     </div>
 
                     <div class="mb-3">
@@ -30,9 +39,15 @@
                     </div>
 
                     <div class="mb-3">
-                        <label asp-for="Price" class="form-label"></label>
-                        <input asp-for="Price" class="form-control" />
-                        <span class="text-danger" asp-validation-for="Price"></span>
+                        <label asp-for="SalePrice" class="form-label"></label>
+                        <input asp-for="SalePrice" class="form-control" />
+                        <span class="text-danger" asp-validation-for="SalePrice"></span>
+                    </div>
+
+                        <div class="mb-3">
+                        <label asp-for="Stock" class="form-label"></label>
+                        <input asp-for="Stock" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Stock"></span>
                     </div>
 
                     <div class="mb-3">

@@ -18,14 +18,14 @@ using System.Threading.Tasks;
 
 namespace Microservices.MarketPlace.Example.Web.Services
 {
-    public class IdentityService : IIdentityService
+    public class ResourceOwnerPasswordTokenService : IResourceOwnerPasswordTokenService
     {
         private readonly HttpClient _httpClient;//Microservice'lere istek yapabilmek adına eklendi.        
         private readonly IHttpContextAccessor _httpContextAccessor;//Cookie erişimi için eklendi.
         private readonly ClientSettings _clientSettings;
         private readonly ServiceApiSettings _serviceApiSettings;
 
-        public IdentityService(HttpClient client, IHttpContextAccessor httpContextAccessor, IOptions<ClientSettings> clientSettings, IOptions<ServiceApiSettings> serviceApiSettings)
+        public ResourceOwnerPasswordTokenService(HttpClient client, IHttpContextAccessor httpContextAccessor, IOptions<ClientSettings> clientSettings, IOptions<ServiceApiSettings> serviceApiSettings)
         {
             _httpClient = client;
             _httpContextAccessor = httpContextAccessor;
@@ -35,13 +35,16 @@ namespace Microservices.MarketPlace.Example.Web.Services
 
         public async Task<TokenResponse> GetAccessTokenByRefreshToken()
         {
-            #region Token endpoint alınmaktadır.
+            #region Token almak için endpoint kontrolü yapılmaktadır.
             var disco = await _httpClient.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
             {
                 Address = _serviceApiSettings.IdentityBaseUri,
                 Policy = new DiscoveryPolicy { RequireHttps = false }
             });
-            if (disco.IsError) { throw disco.Exception; }
+            if (disco.IsError)
+            {
+                throw disco.Exception;
+            }
             #endregion
 
             #region Cookie den refreshToken alınmaktadır.
@@ -79,16 +82,18 @@ namespace Microservices.MarketPlace.Example.Web.Services
             return token;
         }
 
-        
         public async Task RevokeRefreshToken()
         {
-            #region Token endpoint alınmaktadır.
+            #region Token almak için endpoint kontrolü yapılmaktadır.
             var disco = await _httpClient.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
             {
                 Address = _serviceApiSettings.IdentityBaseUri,
                 Policy = new DiscoveryPolicy { RequireHttps = false }
             });
-            if (disco.IsError) { throw disco.Exception; }
+            if (disco.IsError)
+            {
+                throw disco.Exception;
+            }
             #endregion
 
             #region Cookie den refreshToken alınmaktadır.
@@ -109,16 +114,18 @@ namespace Microservices.MarketPlace.Example.Web.Services
             #endregion
         }
 
-        
         public async Task<Response<bool>> SignIn(SigninInput signinInput)
         {
-            #region Token endpoint alınmaktadır.
+            #region Token almak için endpoint kontrolü yapılmaktadır.
             var disco = await _httpClient.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
             {
                 Address = _serviceApiSettings.IdentityBaseUri,
                 Policy = new DiscoveryPolicy { RequireHttps = false }
             });
-            if (disco.IsError) { throw disco.Exception; }
+            if (disco.IsError)
+            {
+                throw disco.Exception;
+            }
             #endregion
 
             #region Token alınması için hazırlanan model ile istek atılmaktadır.

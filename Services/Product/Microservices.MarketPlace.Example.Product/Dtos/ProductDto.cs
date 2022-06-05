@@ -14,7 +14,9 @@ namespace Microservices.MarketPlace.Example.Product.Dtos
         public string Image { get; set; }
         public string StockPictureUrl { get; set; }
         public BrandDto Brand { get; set; }
+        public string BrandId { get; set; }
         public CategoryDto Category { get; set; }
+        public string CategoryId { get; set; }
         public decimal MarketPrice { get; set; }
         public decimal SalePrice { get; set; }
         public decimal KDV { get; set; }

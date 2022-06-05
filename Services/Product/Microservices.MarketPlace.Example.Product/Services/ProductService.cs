@@ -33,7 +33,16 @@ namespace Microservices.MarketPlace.Example.Product.Services
         {
             var product = _mapper.Map<Models.Product>(productDto);
 
+            if (productDto.Category is null)
+                product.Category = await _categoryCollection.Find<Category>(x => x.Id == productDto.CategoryId).FirstAsync();
+
+            if (productDto.Brand is null)
+                product.Brand = await _brandCollection.Find<Brand>(x => x.Id == productDto.BrandId).FirstAsync();
+
             product.UploadDate = DateTime.Now;
+            product.StatusType = Enumeration.Status.StatusType.NewRecord;
+            product.ProductId = product.Name.Substring(0, 2) + product.Category.Name.Substring(0, 2) + product.Brand.Name.Substring(0, 2);
+            product.ShortDescription = product.Description.Length > 50 ? product.Description.Substring(0, 50) + "..." : product.Description;
             await _productCollection.InsertOneAsync(product);
 
             return Response<ProductDto>.Success(_mapper.Map<ProductDto>(product), StaticValue._successReturnModelId);
@@ -71,6 +80,25 @@ namespace Microservices.MarketPlace.Example.Product.Services
             }
 
             return Response<List<ProductDto>>.Success(_mapper.Map<List<ProductDto>>(products), StaticValue._successReturnModelId);
+        }
+
+        public async Task<Response<List<ProductDto>>> GetAllByUserIdAsync(string userId)
+        {
+            var products = await _productCollection.Find<Models.Product>(x => x.UserId == userId).ToListAsync();
+
+            if (products.Any())
+            {
+                foreach (var product in products)
+                {
+                    product.Category = await _categoryCollection.Find<Category>(x => x.Id == product.Category.Id).FirstAsync();
+                }
+            }
+            else
+            {
+                products = new List<Models.Product>();
+            }
+
+            return Response<List<ProductDto>>.Success(_mapper.Map<List<ProductDto>>(products), 200);
         }
 
         public async Task<Response<ProductDto>> GetByIdAsync(string id)

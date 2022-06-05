@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Update";
 }
-@model Microservices.MarketPlace.Example.Web.Models.Products.ProductUpdateInput
+@model ProductUpdateInput
 <div class="row">
     <div class="col-md-8 offset-md-2">
 
@@ -22,6 +22,15 @@
                         <span class="text-danger" asp-validation-for="CategoryId"></span>
                     </div>
 
+                       <div class="mb-3">
+                        <label for="BrandId" id="BrandId" class="form-label" asp-for="BrandId"></label>
+                        <select asp-for="BrandId" class="form-control" asp-items="@ViewBag.brandList">
+                            <option value="">Marka seçiniz</option>
+                        </select>
+
+                        <span class="text-danger" asp-validation-for="BrandId"></span>
+                    </div>
+
                     <div class="mb-3">
                         <label asp-for="Name" class="form-label"></label>
                         <input asp-for="Name" class="form-control" />
@@ -29,9 +38,9 @@
                     </div>
 
                     <div class="mb-3">
-                        <label asp-for="Price" class="form-label"></label>
-                        <input asp-for="Price" class="form-control" />
-                        <span class="text-danger" asp-validation-for="Price"></span>
+                        <label asp-for="SalePrice" class="form-label"></label>
+                        <input asp-for="SalePrice" class="form-control" />
+                        <span class="text-danger" asp-validation-for="SalePrice"></span>
                     </div>
 
                     <div class="mb-3">

@@ -11,6 +11,8 @@ namespace Microservices.MarketPlace.Example.Product.Services.Interfaces
 
         Task<Response<ProductDto>> GetByIdAsync(string id);
 
+        Task<Response<List<ProductDto>>> GetAllByUserIdAsync(string userId);
+
         Task<Response<ProductDto>> CreateAsync(ProductDto productDto);
 
         Task<Response<NoContent>> UpdateAsync(ProductDto productDto);

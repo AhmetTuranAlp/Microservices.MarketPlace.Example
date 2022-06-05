@@ -28,8 +28,10 @@ namespace Microservices.MarketPlace.Example.Web.Controllers
         public async Task<IActionResult> Create()
         {
             var categories = await _productService.GetAllCategoryAsync();
-
             ViewBag.categoryList = new SelectList(categories, "Id", "Name");
+
+            var brands = await _productService.GetAllBrandAsync();
+            ViewBag.brandList = new SelectList(brands, "Id", "Name");
 
             return View();
         }
@@ -43,6 +45,14 @@ namespace Microservices.MarketPlace.Example.Web.Controllers
             {
                 return View();
             }
+
+            var brands = await _productService.GetAllBrandAsync();
+            ViewBag.brandList = new SelectList(brands, "Id", "Name");
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
             productCreateInput.UserId = _sharedIdentityService.GetUserId;
 
             await _productService.CreateProductAsync(productCreateInput);
@@ -53,21 +63,26 @@ namespace Microservices.MarketPlace.Example.Web.Controllers
         public async Task<IActionResult> Update(string id)
         {
             var product = await _productService.GetByProductId(id);
+
             var categories = await _productService.GetAllCategoryAsync();
+            ViewBag.categoryList = new SelectList(categories, "Id", "Name");
+            var brands = await _productService.GetAllBrandAsync();
+            ViewBag.brandList = new SelectList(brands, "Id", "Name");
 
             if (product == null)
             {
                 //mesaj göster
                 RedirectToAction(nameof(Index));
             }
-            ViewBag.categoryList = new SelectList(categories, "Id", "Name", product.Id);
+        
             ProductUpdateInput productUpdateInput = new()
             {
                 Id = product.Id,
                 Name = product.Name,
                 Description = product.Description,
-                Price = product.SalePrice,
+                SalePrice = product.SalePrice,
                 CategoryId = product.Category.Id,
+                BrandId = product.Brand.Id,
                 UserId = product.UserId,
                 Picture = product.Image
             };

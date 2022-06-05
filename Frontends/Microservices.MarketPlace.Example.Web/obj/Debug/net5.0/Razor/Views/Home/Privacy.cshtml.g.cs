@@ -26,8 +26,50 @@ using Microservices.MarketPlace.Example.Web.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\GithubProject\Microservices.MarketPlace.Example\Frontends\Microservices.MarketPlace.Example.Web\Views\_ViewImports.cshtml"
+using Microservices.MarketPlace.Example.Web.Models.Baskets;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\GithubProject\Microservices.MarketPlace.Example\Frontends\Microservices.MarketPlace.Example.Web\Views\_ViewImports.cshtml"
+using Microservices.MarketPlace.Example.Web.Models.Discounts;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\GithubProject\Microservices.MarketPlace.Example\Frontends\Microservices.MarketPlace.Example.Web\Views\_ViewImports.cshtml"
+using Microservices.MarketPlace.Example.Web.Models.Images;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\GithubProject\Microservices.MarketPlace.Example\Frontends\Microservices.MarketPlace.Example.Web\Views\_ViewImports.cshtml"
+using Microservices.MarketPlace.Example.Web.Models.Orders;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "C:\GithubProject\Microservices.MarketPlace.Example\Frontends\Microservices.MarketPlace.Example.Web\Views\_ViewImports.cshtml"
+using Microservices.MarketPlace.Example.Web.Models.Payments;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "C:\GithubProject\Microservices.MarketPlace.Example\Frontends\Microservices.MarketPlace.Example.Web\Views\_ViewImports.cshtml"
+using Microservices.MarketPlace.Example.Web.Models.Products;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d8ddb6bffa5a9b264bf8f89038bf03c234083fd3", @"/Views/Home/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4654dee1c6223e0df00342bb7818ead8ca9c06d1", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"98788e1ff722484c07406582cd3ea8245202f2f0", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Privacy : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

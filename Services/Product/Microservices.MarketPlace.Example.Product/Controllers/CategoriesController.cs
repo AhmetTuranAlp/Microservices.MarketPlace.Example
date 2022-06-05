@@ -8,19 +8,19 @@ namespace Microservices.MarketPlace.Example.Product.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BrandController : CustomBaseController
+    public class CategoriesController : CustomBaseController
     {
-        private readonly IBrandService _brandService;
+        private readonly ICategoryService _categoryService;
 
-        public BrandController(IBrandService brandService)
+        public CategoriesController(ICategoryService categoryService)
         {
-            _brandService = brandService;
+            _categoryService = categoryService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var response = await _brandService.GetAllAsync();
+            var response = await _categoryService.GetAllAsync();
 
             return CreateActionResultInstance(response);
         }
@@ -28,15 +28,16 @@ namespace Microservices.MarketPlace.Example.Product.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(string id)
         {
-            var response = await _brandService.GetByIdAsync(id);
+            var response = await _categoryService.GetByIdAsync(id);
 
             return CreateActionResultInstance(response);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(BrandDto brandDto)
+        public async Task<IActionResult> Create(CategoryDto categoryDto)
         {
-            var response = await _brandService.CreateAsync(brandDto);
+            var response = await _categoryService.CreateAsync(categoryDto);
+
             return CreateActionResultInstance(response);
         }
     }

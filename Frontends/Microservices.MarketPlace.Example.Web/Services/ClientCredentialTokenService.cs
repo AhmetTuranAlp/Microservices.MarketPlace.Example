@@ -25,13 +25,16 @@ namespace Microservices.MarketPlace.Example.Web.Services
 
         public async Task<string> GetToken()
         {
+            #region Cache den AccessToken alınmaktadır.
             var currentToken = await _clientAccessTokenCache.GetAsync("WebClientToken");
 
             if (currentToken != null)
             {
                 return currentToken.AccessToken;
             }
+            #endregion
 
+            #region Cache de AccessToken değeri yok ise, token almak için endpoint kontrolü yapılmaktadır.
             var disco = await _httpClient.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
             {
                 Address = _serviceApiSettings.IdentityBaseUri,
@@ -42,7 +45,9 @@ namespace Microservices.MarketPlace.Example.Web.Services
             {
                 throw disco.Exception;
             }
+            #endregion
 
+            #region Token almak için istek yapılmaktadır.
             var clientCredentialTokenRequest = new ClientCredentialsTokenRequest
             {
                 ClientId = _clientSettings.WebClient.ClientId,
@@ -56,8 +61,11 @@ namespace Microservices.MarketPlace.Example.Web.Services
             {
                 throw newToken.Exception;
             }
+            #endregion
 
-            await _clientAccessTokenCache.SetAsync("WebClientToken", newToken.AccessToken, newToken.ExpiresIn);
+            #region Token geçerlilik süresi ayarlanarak cache kaydedilmektedir.
+            await _clientAccessTokenCache.SetAsync("WebClientToken", newToken.AccessToken, newToken.ExpiresIn); 
+            #endregion
 
             return newToken.AccessToken;
         }

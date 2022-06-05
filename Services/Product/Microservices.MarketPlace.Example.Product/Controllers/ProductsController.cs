@@ -8,11 +8,11 @@ namespace Microservices.MarketPlace.Example.Product.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : CustomBaseController
+    public class ProductsController : CustomBaseController
     {
         private readonly IProductService _productService;
 
-        public ProductController(IProductService productService)
+        public ProductsController(IProductService productService)
         {
             _productService = productService;
         }
@@ -29,6 +29,15 @@ namespace Microservices.MarketPlace.Example.Product.Controllers
         public async Task<IActionResult> GetById(string id)
         {
             var response = await _productService.GetByIdAsync(id);
+
+            return CreateActionResultInstance(response);
+        }
+
+        [HttpGet]
+        [Route("/api/[controller]/GetAllByUserId/{userId}")]
+        public async Task<IActionResult> GetAllByUserId(string userId)
+        {
+            var response = await _productService.GetAllByUserIdAsync(userId);
 
             return CreateActionResultInstance(response);
         }

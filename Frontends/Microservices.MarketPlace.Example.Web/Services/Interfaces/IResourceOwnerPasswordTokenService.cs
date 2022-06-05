@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Microservices.MarketPlace.Example.Web.Services.Interfaces
 {
-    public interface IIdentityService
+    public interface IResourceOwnerPasswordTokenService
     {
         /// <summary>
         /// Kullanıcının login işlemi sonrası IdentityServer üzerinden token alınması gerçekleşmektedir.

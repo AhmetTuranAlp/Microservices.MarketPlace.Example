@@ -14,7 +14,7 @@ namespace Microservices.MarketPlace.Example.Web.Extensions
         {
             var serviceApiSettings = Configuration.GetSection("ServiceApiSettings").Get<ServiceApiSettings>();
             services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>();
-            services.AddHttpClient<IIdentityService, IdentityService>();
+            services.AddHttpClient<IResourceOwnerPasswordTokenService, ResourceOwnerPasswordTokenService>();
 
             services.AddHttpClient<IProductService, ProductService>(opt =>
             {
