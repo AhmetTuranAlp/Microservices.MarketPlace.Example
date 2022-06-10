@@ -21,7 +21,7 @@ namespace Microservices.MarketPlace.Example.Web.Services
 
         public async Task<bool> DeletePhoto(string photoUrl)
         {
-            var response = await _httpClient.DeleteAsync($"photos?photoUrl={photoUrl}");
+            var response = await _httpClient.DeleteAsync($"image?imageUrl={photoUrl}");
             return response.IsSuccessStatusCode;
         }
 
@@ -31,7 +31,6 @@ namespace Microservices.MarketPlace.Example.Web.Services
             {
                 return null;
             }
-            // örnek dosya ismi= 203802340234.jpg
             var randonFilename = $"{Guid.NewGuid().ToString()}{Path.GetExtension(photo.FileName)}";
 
             using var ms = new MemoryStream();
@@ -40,9 +39,10 @@ namespace Microservices.MarketPlace.Example.Web.Services
 
             var multipartContent = new MultipartFormDataContent();
 
-            multipartContent.Add(new ByteArrayContent(ms.ToArray()), "photo", randonFilename);
-
-            var response = await _httpClient.PostAsync("photos", multipartContent);
+            //image ismi microservis tarafında controller da belirnen parametre ismi verildi.
+            multipartContent.Add(new ByteArrayContent(ms.ToArray()), "image", randonFilename);
+            //image ismi microservis tarafında controller adı.
+            var response = await _httpClient.PostAsync("image", multipartContent);
 
             if (!response.IsSuccessStatusCode)
             {

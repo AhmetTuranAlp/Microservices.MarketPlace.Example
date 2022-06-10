@@ -7,9 +7,9 @@ namespace Microservices.MarketPlace.Example.Web.Validators
     {
         public ProductUpdateInputValidator()
         {
-            RuleFor(x => x.Name).NotEmpty().WithMessage("isim alanı boş olamaz");
-            RuleFor(x => x.Description).NotEmpty().WithMessage("açıklama alanı boş olamaz");
-            RuleFor(x => x.SalePrice).NotEmpty().WithMessage("fiyat alanı boş olamaz").ScalePrecision(2, 6).WithMessage("hatalı para formatı");
+            RuleFor(x => x.Name).NotEmpty().WithMessage("İsim alanı boş olamaz");
+            RuleFor(x => x.Description).NotEmpty().WithMessage("Açıklama alanı boş olamaz");
+            RuleFor(x => x.SalePrice).NotEmpty().WithMessage("Fiyat alanı boş olamaz").ScalePrecision(2, 12).WithMessage("Hatalı para formatı");
         }
     }
 }

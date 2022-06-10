@@ -62,7 +62,7 @@ namespace Microservices.MarketPlace.Example.Web.Controllers
 
         public async Task<IActionResult> Update(string id)
         {
-            var product = await _productService.GetByProductId(id);
+             var product = await _productService.GetByProductId(id);
 
             var categories = await _productService.GetAllCategoryAsync();
             ViewBag.categoryList = new SelectList(categories, "Id", "Name");

@@ -50,21 +50,22 @@ namespace Microservices.MarketPlace.Example.Product.Services
 
         public async Task<Response<NoContent>> DeleteAsync(string id)
         {
-            var result = await _productCollection.DeleteOneAsync(x => x.Id == id);
-
-            if (result.DeletedCount > 0)
+            var product = await _productCollection.FindAsync(x => x.Id == id).Result.FirstAsync();
+            if (product != null)
             {
-                return Response<NoContent>.Success(StaticValue._successReturnNotModelId);
+                product.StatusType = Enumeration.Status.StatusType.Deleted;
+                var result = await _productCollection.FindOneAndReplaceAsync(x => x.Id == id, product);
+                if (result == null)
+                {
+                    return Response<NoContent>.Fail(StaticValue._productNotFound, StaticValue._notFoundId);
+                }
             }
-            else
-            {
-                return Response<NoContent>.Fail(StaticValue._productNotFound, StaticValue._notFoundId);
-            }
+            return Response<NoContent>.Success(StaticValue._successReturnNotModelId);
         }
 
         public async Task<Response<List<ProductDto>>> GetAllAsync()
         {
-            var products = await _productCollection.Find(product => true).ToListAsync();
+            var products = await _productCollection.Find(product => product.StatusType != Enumeration.Status.StatusType.Deleted).ToListAsync();
 
             if (products.Any())
             {
@@ -84,7 +85,7 @@ namespace Microservices.MarketPlace.Example.Product.Services
 
         public async Task<Response<List<ProductDto>>> GetAllByUserIdAsync(string userId)
         {
-            var products = await _productCollection.Find<Models.Product>(x => x.UserId == userId).ToListAsync();
+            var products = await _productCollection.Find<Models.Product>(x => x.UserId == userId && x.StatusType != Enumeration.Status.StatusType.Deleted).ToListAsync();
 
             if (products.Any())
             {

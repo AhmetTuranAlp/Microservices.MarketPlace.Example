@@ -14,7 +14,7 @@ namespace Microservices.MarketPlace.Example.Image.Controllers
     public class ImageController : CustomBaseController
     {
         [HttpPost]
-        public async Task<IActionResult> PhotoSave(IFormFile image, CancellationToken cancellationToken)
+        public async Task<IActionResult> ImageSave(IFormFile image, CancellationToken cancellationToken)
         {
             //CancellationToken : Kullanıcı kaydetme işlemini iptal ettiğinde burada da iptal edilsin.
             if (image != null && image.Length > 0)
@@ -36,7 +36,7 @@ namespace Microservices.MarketPlace.Example.Image.Controllers
 
 
         [HttpDelete]
-        public IActionResult PhotoDelete(string imageUrl)
+        public IActionResult ImageDelete(string imageUrl)
         {
             var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", imageUrl);
             if (!System.IO.File.Exists(path))
