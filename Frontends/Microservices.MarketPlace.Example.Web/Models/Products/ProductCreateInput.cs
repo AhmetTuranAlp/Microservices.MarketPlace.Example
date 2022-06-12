@@ -19,7 +19,7 @@ namespace Microservices.MarketPlace.Example.Web.Models.Products
         [Display(Name = "Ürün Stok")]
         public int Stock { get; set; }
 
-        public string Picture { get; set; }
+        public string Image { get; set; }
 
         public string UserId { get; set; }
 
@@ -31,6 +31,6 @@ namespace Microservices.MarketPlace.Example.Web.Models.Products
         public string BrandId { get; set; }
 
         [Display(Name = "Ürün Resim")]
-        public IFormFile PhotoFormFile { get; set; }
+        public IFormFile ImageFormFile { get; set; }
     }
 }

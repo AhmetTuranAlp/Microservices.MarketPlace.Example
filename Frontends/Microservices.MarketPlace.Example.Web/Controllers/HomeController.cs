@@ -1,4 +1,7 @@
-﻿using Microservices.MarketPlace.Example.Web.Models;
+﻿using Microservices.MarketPlace.Example.Web.Exceptions;
+using Microservices.MarketPlace.Example.Web.Models;
+using Microservices.MarketPlace.Example.Web.Services.Interfaces;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,24 +16,34 @@ namespace Microservices.MarketPlace.Example.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IProductService _productService;
+
+        public HomeController(ILogger<HomeController> logger, IProductService productService)
         {
             _logger = logger;
+            _productService = productService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await _productService.GetAllProductAsync());
         }
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> Detail(string id)
         {
-            return View();
+            return View(await _productService.GetByProductId(id));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
+            var errorFeature = HttpContext.Features.Get<IExceptionHandlerFeature>();
+
+            if (errorFeature != null && errorFeature.Error is UnAuthorizeException)
+            {
+                return RedirectToAction(nameof(AuthController.Logout), "Auth");
+            }
+
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }

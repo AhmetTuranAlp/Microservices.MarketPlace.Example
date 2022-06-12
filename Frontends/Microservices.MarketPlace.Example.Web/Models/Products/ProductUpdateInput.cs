@@ -22,7 +22,7 @@ namespace Microservices.MarketPlace.Example.Web.Models.Products
 
         public string UserId { get; set; }
 
-        public string Picture { get; set; }
+        public string Image { get; set; }
 
 
         [Display(Name = "Ürün Kategori")]

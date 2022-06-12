@@ -25,11 +25,11 @@ namespace Microservices.MarketPlace.Example.Web.Services
 
         public async Task<bool> CreateProductAsync(ProductCreateInput productCreateInput)
         {
-            var resultPhotoService = await _imageService.UploadPhoto(productCreateInput.PhotoFormFile);
+            var resultPhotoService = await _imageService.UploadImage(productCreateInput.ImageFormFile);
 
             if (resultPhotoService != null)
             {
-                productCreateInput.Picture = resultPhotoService.Url;
+                productCreateInput.Image = resultPhotoService.Url;
             }
 
             var response = await _client.PostAsJsonAsync<ProductCreateInput>("products", productCreateInput);
@@ -84,7 +84,8 @@ namespace Microservices.MarketPlace.Example.Web.Services
             var responseSuccess = await response.Content.ReadFromJsonAsync<Response<List<ProductViewModel>>>();
             responseSuccess.Data.ForEach(x =>
             {
-                x.StockPictureUrl = _imageHelper.GetPhotoStockUrl(x.Image);
+                if (!string.IsNullOrEmpty(x.Image))
+                    x.ImageUrl = _imageHelper.GetImageUrl(x.Image);
             });
             return responseSuccess.Data;
         }
@@ -102,7 +103,8 @@ namespace Microservices.MarketPlace.Example.Web.Services
 
             responseSuccess.Data.ForEach(x =>
             {
-                x.StockPictureUrl = _imageHelper.GetPhotoStockUrl(x.Image);
+                if (!string.IsNullOrEmpty(x.Image))
+                    x.ImageUrl = _imageHelper.GetImageUrl(x.Image);
             });
 
             return responseSuccess.Data;
@@ -119,19 +121,19 @@ namespace Microservices.MarketPlace.Example.Web.Services
 
             var responseSuccess = await response.Content.ReadFromJsonAsync<Response<ProductViewModel>>();
 
-            responseSuccess.Data.StockPictureUrl = _imageHelper.GetPhotoStockUrl(responseSuccess.Data.Image);
+            responseSuccess.Data.ImageUrl = _imageHelper.GetImageUrl(responseSuccess.Data.Image);
 
             return responseSuccess.Data;
         }
 
         public async Task<bool> UpdateProductAsync(ProductUpdateInput productUpdateInput)
         {
-            var resultPhotoService = await _imageService.UploadPhoto(productUpdateInput.PhotoFormFile);
+            var resultPhotoService = await _imageService.UploadImage(productUpdateInput.PhotoFormFile);
 
             if (resultPhotoService != null)
             {
-                await _imageService.DeletePhoto(productUpdateInput.Picture);
-                productUpdateInput.Picture = resultPhotoService.Url;
+                await _imageService.DeleteImage(productUpdateInput.Image);
+                productUpdateInput.Image = resultPhotoService.Url;
             }
 
             var response = await _client.PutAsJsonAsync<ProductUpdateInput>("products", productUpdateInput);

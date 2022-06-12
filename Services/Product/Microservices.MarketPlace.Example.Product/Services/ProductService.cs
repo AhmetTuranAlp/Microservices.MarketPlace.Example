@@ -53,7 +53,9 @@ namespace Microservices.MarketPlace.Example.Product.Services
             var product = await _productCollection.FindAsync(x => x.Id == id).Result.FirstAsync();
             if (product != null)
             {
+                product.UpdateDate = DateTime.Now;
                 product.StatusType = Enumeration.Status.StatusType.Deleted;
+
                 var result = await _productCollection.FindOneAndReplaceAsync(x => x.Id == id, product);
                 if (result == null)
                 {
@@ -92,6 +94,7 @@ namespace Microservices.MarketPlace.Example.Product.Services
                 foreach (var product in products)
                 {
                     product.Category = await _categoryCollection.Find<Category>(x => x.Id == product.Category.Id).FirstAsync();
+                    product.Brand = await _brandCollection.Find<Brand>(x => x.Id == product.Brand.Id).FirstAsync();
                 }
             }
             else
@@ -118,6 +121,12 @@ namespace Microservices.MarketPlace.Example.Product.Services
         public async Task<Response<NoContent>> UpdateAsync(ProductDto productDto)
         {
             var product = _mapper.Map<Models.Product>(productDto);
+            if (product != null)
+            {
+                product.UpdateDate = DateTime.Now;
+                product.StatusType = Enumeration.Status.StatusType.Active;
+                product.ShortDescription = product.Description.Length > 50 ? product.Description.Substring(0, 50) + "..." : product.Description;
+            }
 
             var result = await _productCollection.FindOneAndReplaceAsync(x => x.Id == productDto.Id, product);
 

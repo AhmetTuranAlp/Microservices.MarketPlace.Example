@@ -6,8 +6,8 @@ namespace Microservices.MarketPlace.Example.Web.Services.Interfaces
 {
     public interface IImageService
     {
-        Task<ImageViewModel> UploadPhoto(IFormFile photo);
+        Task<ImageViewModel> UploadImage(IFormFile iamge);
 
-        Task<bool> DeletePhoto(string photoUrl);
+        Task<bool> DeleteImage(string imageUrl);
     }
 }

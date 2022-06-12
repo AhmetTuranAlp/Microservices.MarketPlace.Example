@@ -84,7 +84,7 @@ namespace Microservices.MarketPlace.Example.Web.Controllers
                 CategoryId = product.Category.Id,
                 BrandId = product.Brand.Id,
                 UserId = product.UserId,
-                Picture = product.Image
+                Image = product.Image
             };
 
             return View(productUpdateInput);
@@ -94,11 +94,11 @@ namespace Microservices.MarketPlace.Example.Web.Controllers
         public async Task<IActionResult> Update(ProductUpdateInput productUpdateInput)
         {
             var categories = await _productService.GetAllCategoryAsync();
-            ViewBag.categoryList = new SelectList(categories, "Id", "Name", productUpdateInput.Id);
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
+            ViewBag.categoryList = new SelectList(categories, "Id", "Name");
+
+            var brands = await _productService.GetAllBrandAsync();
+            ViewBag.brandList = new SelectList(brands, "Id", "Name");
+
             await _productService.UpdateProductAsync(productUpdateInput);
 
             return RedirectToAction(nameof(Index));

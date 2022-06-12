@@ -19,23 +19,23 @@ namespace Microservices.MarketPlace.Example.Web.Services
             _httpClient = httpClient;
         }
 
-        public async Task<bool> DeletePhoto(string photoUrl)
+        public async Task<bool> DeleteImage(string imageUrl)
         {
-            var response = await _httpClient.DeleteAsync($"image?imageUrl={photoUrl}");
+            var response = await _httpClient.DeleteAsync($"image?imageUrl={imageUrl}");
             return response.IsSuccessStatusCode;
         }
 
-        public async Task<ImageViewModel> UploadPhoto(IFormFile photo)
+        public async Task<ImageViewModel> UploadImage(IFormFile image)
         {
-            if (photo == null || photo.Length <= 0)
+            if (image == null || image.Length <= 0)
             {
                 return null;
             }
-            var randonFilename = $"{Guid.NewGuid().ToString()}{Path.GetExtension(photo.FileName)}";
+            var randonFilename = $"{Guid.NewGuid().ToString()}{Path.GetExtension(image.FileName)}";
 
             using var ms = new MemoryStream();
 
-            await photo.CopyToAsync(ms);
+            await image.CopyToAsync(ms);
 
             var multipartContent = new MultipartFormDataContent();
 

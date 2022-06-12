@@ -12,7 +12,7 @@ namespace Microservices.MarketPlace.Example.Web.Models.Products
 
         public string ShortDescription { get; set; }
 
-        public string StockPictureUrl { get; set; }
+        public string ImageUrl { get; set; }
         public string Image { get; set; }
         public BrandViewModel Brand { get; set; }
         public CategoryViewModel Category { get; set; }

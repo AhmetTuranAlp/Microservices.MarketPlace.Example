@@ -12,9 +12,9 @@ namespace Microservices.MarketPlace.Example.Web.Helpers
             _serviceApiSettings = serviceApiSettings.Value;
         }
 
-        public string GetPhotoStockUrl(string photoUrl)
+        public string GetImageUrl(string imageUrl)
         {
-            return $"{_serviceApiSettings.ImageUri}/photos/{photoUrl}";
+            return $"{_serviceApiSettings.ImageUri}/images/{imageUrl}";
         }
     }
 }
