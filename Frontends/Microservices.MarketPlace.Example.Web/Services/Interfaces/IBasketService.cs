@@ -15,8 +15,17 @@ namespace Microservices.MarketPlace.Example.Web.Services.Interfaces
 
         Task<bool> RemoveBasketItem(string productId);
 
+        /// <summary>
+        /// Sepete indirim Uygulama
+        /// </summary>
+        /// <param name="discountCode"></param>
+        /// <returns></returns>
         Task<bool> ApplyDiscount(string discountCode);
 
+        /// <summary>
+        /// İndirim İptal Etme
+        /// </summary>
+        /// <returns></returns>
         Task<bool> CancelApplyDiscount();
     }
 }

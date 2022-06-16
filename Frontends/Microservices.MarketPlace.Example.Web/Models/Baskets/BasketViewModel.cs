@@ -13,9 +13,16 @@ namespace Microservices.MarketPlace.Example.Web.Models.Baskets
 
         public string UserId { get; set; }
 
+        /// <summary>
+        /// İndirim kodu
+        /// </summary>
         public string DiscountCode { get; set; }
 
+        /// <summary>
+        /// İndirim Oranı
+        /// </summary>
         public int? DiscountRate { get; set; }
+
         private List<BasketItemViewModel> _basketItems;
 
         public List<BasketItemViewModel> BasketItems
@@ -24,7 +31,7 @@ namespace Microservices.MarketPlace.Example.Web.Models.Baskets
             {
                 if (HasDiscount)
                 {
-                    //Örnek kurs fiyat 100 TL indirim %10
+                    //Örnek product fiyat 100 TL indirim %10
                     _basketItems.ForEach(x =>
                     {
                         var discountPrice = x.Price * ((decimal)DiscountRate.Value / 100);
@@ -39,11 +46,15 @@ namespace Microservices.MarketPlace.Example.Web.Models.Baskets
             }
         }
 
+
         public decimal TotalPrice
         {
             get => _basketItems.Sum(x => x.GetCurrentPrice);
         }
 
+        /// <summary>
+        /// İndirim kodu ve miktarı var ise true, yok ise false olarak dönecek.
+        /// </summary>
         public bool HasDiscount
         {
             get => !string.IsNullOrEmpty(DiscountCode) && DiscountRate.HasValue;

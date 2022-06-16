@@ -11,9 +11,12 @@
 
         private decimal? DiscountAppliedPrice;
 
+        /// <summary>
+        /// İndirim durumu olup olmadıgı kontrol edilerek fiyat bilgisi alınmaktadır.
+        /// </summary>
         public decimal GetCurrentPrice
         {
-            get => DiscountAppliedPrice != null ? DiscountAppliedPrice.Value : Price;
+            get => DiscountAppliedPrice != null ? DiscountAppliedPrice.Value * Quantity : Price * Quantity;
         }
 
         public void AppliedDiscount(decimal discountPrice)
