@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7Rlm8Kt4GgzQiPoo7PiR/+HQ9JUChzx33JKVn5gQuTzOONqANmO4PIkk42s9cxwNapjXNem6ua+l/SiXosIsIQ==",
+  "dgSpecHash": "FqhdBoPHtmc/1daME+uaE021Vi+k1huo6xltU9arpEVVP0Nu+2xy2IBDfSzK0KQIxUL0jU35p6MxDpWMQznDKw==",
   "success": true,
   "projectFilePath": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Basket\\Microservices.MarketPlace.Example.Basket\\Microservices.MarketPlace.Example.Basket.csproj",
   "expectedPackageFiles": [

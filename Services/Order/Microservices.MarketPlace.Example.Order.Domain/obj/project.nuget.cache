@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "L94veDNgzEQP+Oq7lD0vMv1IXWnVCPuHy0XtyJ91LYxqlNAkI68Fui3aWwsk5HClZa7qll/hTKzfFmlm+TDzVQ==",
+  "dgSpecHash": "g/mIK4gqFbAHtzNoo3p+OKE2WP2AAF59mU+1noTQc/efsFTsr/3mALYhTrydZqOgNTKX5R32/Rx8u8+m0tcr0Q==",
   "success": true,
   "projectFilePath": "C:\\GithubProject\\Microservices.MarketPlace.Example\\Services\\Order\\Microservices.MarketPlace.Example.Order.Domain\\Microservices.MarketPlace.Example.Order.Domain.csproj",
   "expectedPackageFiles": [
